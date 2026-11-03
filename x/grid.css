@@ -1,0 +1,245 @@
+:root:not(#s0):not(#s1) {
+	--ui: 17;
+	--fs: calc(var(--ui) * 1px);
+	--lh: 20px;
+	--cw: calc(var(--fs) * 0.6);
+	--pad: 0px;
+	--sc: calc(var(--cw) * 13 / var(--ui));
+	--sl: calc(var(--lh) * 13 / var(--ui));
+	--rail-w: calc(var(--cw) * 18);
+	--frame-w: calc(var(--cw) * 188);
+}
+
+:root:not(#s0):not(#s1) .tb-in {
+	gap: 0;
+	padding: calc(var(--pad) + var(--lh)) var(--cw);
+}
+:root:not(#s0):not(#s1) .tb-tabs {
+	gap: 0;
+	margin: var(--lh) 0;
+}
+:root:not(#s0):not(#s1) #tabbar button {
+	gap: var(--cw);
+	min-height: 0;
+	height: var(--lh);
+	padding: 0 var(--cw);
+	line-height: var(--lh);
+}
+
+:root:not(#s0):not(#s1) .sf-region {
+	line-height: var(--sl);
+}
+:root:not(#s0):not(#s1) .sf-main {
+	gap: var(--sl);
+	padding: 0;
+}
+:root:not(#s0):not(#s1) .sf-chat-reader.sf-main {
+	max-width: calc(var(--sc) * 72);
+	padding: 0 calc(var(--sc) * 2);
+}
+:root:not(#s0):not(#s1) .tv-dock > .sf-dock.sf-chat-reader {
+	max-width: calc(var(--sc) * 72);
+	padding: 0 calc(var(--sc) * 2) var(--sl);
+}
+:root:not(#s0):not(#s1) .sf-region :is(.sf-col, .sf-dock, .sf-section, .sf-card-body, .sf-section-body, .sf-tool-body) {
+	row-gap: 0;
+}
+:root:not(#s0):not(#s1) .sf-region .sf-spacer {
+	height: var(--sl);
+}
+:root:not(#s0):not(#s1) .sf-region .sf-card {
+	border: 0;
+	box-shadow: inset 0 0 0 1px var(--line);
+}
+:root:not(#s0):not(#s1) .sf-region .sf-card-head {
+	min-height: var(--sl);
+	padding: 0 calc(var(--sc) * 2);
+}
+:root:not(#s0):not(#s1) .sf-region .sf-card-body {
+	padding: 0 calc(var(--sc) * 2) var(--sl);
+}
+:root:not(#s0):not(#s1) .sf-region .nohead.sf-card > .sf-card-body {
+	padding: var(--sl) calc(var(--sc) * 2);
+}
+:root:not(#s0):not(#s1) .sf-region .sf-card[data-role^='omp.user'] {
+	box-shadow: none;
+}
+:root:not(#s0):not(#s1) .sf-region .sf-card[data-role^='omp.user'] > .sf-card-body {
+	padding: 0 calc(var(--sc) * 2);
+	box-shadow: 0 0 0 calc(var(--sl) / 4) var(--frost);
+}
+:root:not(#s0):not(#s1) .sf-region .md :is(p, ul, ol, blockquote, pre, .tbl, .code, .mfig) {
+	margin: 0 0 var(--sl);
+}
+:root:not(#s0):not(#s1) .sf-region .md > :last-child {
+	margin-bottom: 0;
+}
+:root:not(#s0):not(#s1) .sf-region .md :is(h1, h2, h3, h4) {
+	margin: var(--sl) 0 0;
+	line-height: var(--sl);
+}
+:root:not(#s0):not(#s1) .sf-region .md h1 {
+	line-height: calc(var(--sl) * 2);
+}
+:root:not(#s0):not(#s1) .sf-region .md :is(ul, ol) {
+	padding-left: calc(var(--sc) * 3);
+}
+:root:not(#s0):not(#s1) .sf-region .md li {
+	margin: 0;
+}
+:root:not(#s0):not(#s1) .sf-region .md blockquote {
+	padding-left: calc(var(--sc) * 2);
+}
+:root:not(#s0):not(#s1) .sf-region .md :not(pre) > code {
+	line-height: 0;
+}
+:root:not(#s0):not(#s1) .sf-region .md :is(.code, .mfig, .md-html) {
+	border: 0;
+	box-shadow: inset 0 0 0 1px var(--line);
+}
+:root:not(#s0):not(#s1) .sf-region .md :is(.code-head, .mfig-head, .code-out-foot) {
+	height: var(--sl);
+	padding: 0 0 0 calc(var(--sc) * 2);
+	border-bottom: 0;
+	box-shadow: inset 0 -1px 0 var(--line);
+}
+:root:not(#s0):not(#s1) .sf-region .md .code-copy {
+	min-height: 0;
+	height: var(--sl);
+}
+:root:not(#s0):not(#s1) .sf-region .md .code pre {
+	padding: var(--sl) calc(var(--sc) * 2);
+	font: 13px/var(--sl) var(--mn);
+}
+:root:not(#s0):not(#s1) .sf-region .md :is(th, td) {
+	padding: 0 calc(var(--sc) * 3) 0 0;
+	border-bottom: 0;
+	box-shadow: inset 0 -1px 0 var(--line);
+}
+:root:not(#s0):not(#s1) .sf-col[data-role^='omp.editor'] {
+	row-gap: 0;
+	margin-top: var(--sl);
+	padding: var(--sl) calc(var(--sc) * 2);
+	border: 0;
+	box-shadow: inset 0 0 0 1px var(--line);
+}
+:root:not(#s0):not(#s1) .sf-col[data-role^='omp.editor']:focus-within {
+	box-shadow: inset 0 0 0 1px var(--acc);
+}
+:root:not(#s0):not(#s1) .sf-col[data-role^='omp.editor'] .sf-editor {
+	--sf-lh: var(--sl);
+	font-size: 13px;
+	line-height: var(--sl);
+}
+:root:not(#s0):not(#s1) :is([data-role='omp.composer.model'], [data-role='omp.composer.effort'], [data-role='omp.composer.thinking'], [data-role='omp.composer.stop']) {
+	min-height: 0;
+	height: var(--sl);
+}
+:root:not(#s0):not(#s1) [data-role='omp.composer.send'] .kbd {
+	width: calc(var(--sc) * 3);
+	height: var(--sl);
+}
+:root:not(#s0):not(#s1) :is(.sf-status, .sf-caption) {
+	height: var(--sl);
+	line-height: var(--sl);
+}
+
+:root:not(#s0):not(#s1) .cmdk {
+	top: calc(var(--pad) + var(--lh) * 5);
+	width: min(calc(var(--cw) * 60), calc(100vw - var(--cw) * 4));
+}
+:root:not(#s0):not(#s1) :is(.cmdk, #cmp, .tn-crumbs, .tn-ib) {
+	border: 0;
+	outline: 1px solid var(--line);
+}
+:root:not(#s0):not(#s1) :is(.ck-top, .tn-cmp-q, .tn-crumbs-q, .tn-ib-head) {
+	gap: var(--cw);
+	height: calc(var(--lh) * 2);
+	padding: 0 calc(var(--cw) * 2);
+	border-bottom: 0;
+	box-shadow: inset 0 -1px 0 var(--line);
+}
+:root:not(#s0):not(#s1) :is(.tn-pl-scopes, .ck-tabs) {
+	gap: var(--cw);
+	height: var(--lh);
+	padding: 0 var(--cw);
+	border-bottom: 0;
+	box-shadow: inset 0 -1px 0 var(--line);
+}
+:root:not(#s0):not(#s1) .tn-pl-scope {
+	min-height: 0;
+	height: var(--lh);
+	line-height: var(--lh);
+}
+:root:not(#s0):not(#s1) :is(.ck-list, .tn-cmp-list, .tn-crumbs-list, .tn-ib-list) {
+	max-height: calc(var(--lh) * 22);
+	padding: 0 0 var(--lh);
+}
+:root:not(#s0):not(#s1) :is(.ck-group, .tn-cmp-g, .tn-ib-gh) {
+	padding: var(--lh) calc(var(--cw) * 2) 0;
+	line-height: var(--lh);
+}
+:root:not(#s0):not(#s1) :is(.ck-item, .tn-cmp-row, .tn-crumbs-row, .tn-ib-row, .pp-item) {
+	gap: var(--cw);
+	min-height: var(--lh);
+	padding: 0 calc(var(--cw) * 2);
+	line-height: var(--lh);
+}
+:root:not(#s0):not(#s1) .ck-sub {
+	margin-left: var(--cw);
+}
+
+:root:not(#s0):not(#s1).tn-status footer#statusline {
+	justify-content: flex-start;
+	padding: calc(var(--pad) + var(--lh) * 2) calc(var(--cw) * 2);
+	line-height: var(--lh);
+}
+:root:not(#s0):not(#s1).tn-status footer#statusline > span.sl-plugins {
+	font-size: var(--fs);
+}
+:root:not(#s0):not(#s1).tn-status footer#statusline > span.tn-git,
+:root:not(#s0):not(#s1).tn-status footer#statusline > span.sl-plugins > span.sl-plugin {
+	line-height: var(--lh);
+}
+:root:not(#s0):not(#s1).tn-status footer#statusline > span.sl-plugins > span.sl-plugin[data-plugin='arc-sidebar'] {
+	padding-bottom: var(--lh);
+}
+:root:not(#s0):not(#s1).tn-status footer#statusline > span.sl-plugins > span.sl-plugin:is([data-tone='deck'], [data-tone='deck-busy']) {
+	gap: var(--cw);
+	padding: 0 var(--cw);
+}
+:root:not(#s0):not(#s1).tn-status footer#statusline > span.sl-plugins > span.sl-plugin[data-tone='time'] {
+	font-size: calc(var(--lh) * 2);
+	line-height: calc(var(--lh) * 2);
+	padding-top: var(--lh);
+}
+:root:not(#s0):not(#s1).tn-status footer#statusline > span.sl-plugins > span.sl-plugin[data-tone='date'] {
+	padding: 0 0 var(--lh);
+}
+:root:not(#s0):not(#s1).tn-status footer#statusline > span.sl-plugins > span.sl-plugin[data-tone^='m-'] {
+	font-size: var(--lh);
+	padding: 0;
+}
+:root:not(#s0):not(#s1).tn-status footer#statusline > span.sl-plugins > span.sl-plugin[data-tone^='m-']::before {
+	line-height: var(--lh);
+	padding: 0;
+}
+:root:not(#s0):not(#s1).tn-status footer#statusline > span.sl-plugins > span.sl-plugin[data-tone^='m-cpu'] {
+	padding-top: var(--lh);
+	border-top: 0;
+	box-shadow: inset 0 1px 0 var(--line);
+}
+:root:not(#s0):not(#s1).tn-status footer#statusline > span.sl-plugins > span.sl-plugin[data-tone^='spark-'] {
+	height: calc(var(--lh) * 2);
+	margin: 0 0 var(--lh);
+}
+:root:not(#s0):not(#s1).tn-status footer#statusline > span.sl-plugins > span.sl-plugin:is([data-tone^='m-net'], [data-tone^='m-load']) {
+	font-size: var(--fs);
+	padding: var(--lh) 0 0;
+	border-top: 0;
+	box-shadow: inset 0 1px 0 var(--line);
+}
+:root:not(#s0):not(#s1).tn-status footer#statusline > span.sl-plugins > span.sl-plugin[data-tone^='m-load'] {
+	padding-top: 0;
+	box-shadow: none;
+}
