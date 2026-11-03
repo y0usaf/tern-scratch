@@ -1,0 +1,37 @@
+:root:not(#s0):not(#s1) {
+	--fo-pane: 0.5;
+	--fo-1: 0.78;
+	--fo-2: 0.6;
+	--fo-3: 0.44;
+	--fo-rail: 0.42;
+	--fo-t: 180ms cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+:root:not(#s0):not(#s1) .tn-pane > .tn-head, :root:not(#s0):not(#s1) .tn-pane > .tn-body > .tv, :root:not(#s0):not(#s1) .sf-main > .sf-col, :root:not(#s0):not(#s1) .tb-in > *, :root:not(#s0):not(#s1) .tb-tabs > .tt, :root:not(#s0):not(#s1) #statusline > *, :root:not(#s0):not(#s1) #statusline > .sl-plugins > .sl-plugin {
+	transition: opacity var(--fo-t);
+}
+:root:not(#s0):not(#s1) .tn-pane.multi:not(.on):not(:focus-within) > .tn-head, :root:not(#s0):not(#s1) .tn-pane.multi:not(.on):not(:focus-within) > .tn-body > .tv {
+	opacity: var(--fo-pane);
+}
+:root:not(#s0):not(#s1) .tn-pane.on .sf-main > :nth-last-child(n+3 of .sf-col) {
+	opacity: var(--fo-1);
+}
+:root:not(#s0):not(#s1) .tn-pane.on .sf-main > :nth-last-child(n+5 of .sf-col) {
+	opacity: var(--fo-2);
+}
+:root:not(#s0):not(#s1) .tn-pane.on .sf-main > :nth-last-child(n+7 of .sf-col) {
+	opacity: var(--fo-3);
+}
+:root:not(#s0):not(#s1) .sf-main > .sf-col:hover, :root:not(#s0):not(#s1) .sf-main > .sf-col:focus-within {
+	opacity: 1;
+}
+:root:not(#s0):not(#s1) #tabbar:not(:hover):not(:focus-within) .tn-session-tab, :root:not(#s0):not(#s1) #tabbar:not(:hover):not(:focus-within) .tb-tabs > .tt:not(.working), :root:not(#s0):not(#s1) #tabbar:not(:hover):not(:focus-within) .tb-row:not(.has) {
+	opacity: var(--fo-rail);
+}
+:root:not(#s0):not(#s1) #statusline:not(:hover):not(:focus-within) > :not(.sl-plugins), :root:not(#s0):not(#s1) #statusline:not(:hover):not(:focus-within) > .sl-plugins > .sl-plugin:not([data-tone='deck-busy']):not([data-tone*='-hot']) {
+	opacity: var(--fo-rail);
+}
+@media (prefers-reduced-motion: reduce) {
+	:root:not(#s0):not(#s1) .tn-pane > .tn-head, :root:not(#s0):not(#s1) .tn-pane > .tn-body > .tv, :root:not(#s0):not(#s1) .sf-main > .sf-col, :root:not(#s0):not(#s1) .tb-in > *, :root:not(#s0):not(#s1) .tb-tabs > .tt, :root:not(#s0):not(#s1) #statusline > *, :root:not(#s0):not(#s1) #statusline > .sl-plugins > .sl-plugin {
+		transition: none;
+	}
+}
