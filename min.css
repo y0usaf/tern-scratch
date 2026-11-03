@@ -23,6 +23,8 @@
 	--r: 2px;
 	--u: 4px;
 	--rail-w: 184px;
+	--frame-w: 1920px;
+	--frame-x: max(0px, (100vw - var(--frame-w)) / 2);
 	display: block;
 	height: 100%;
 	overflow: hidden;
@@ -234,7 +236,7 @@
 	position: fixed;
 	z-index: 20;
 	top: 0;
-	left: 0;
+	left: var(--frame-x);
 	bottom: 0;
 	display: block;
 	width: var(--rail-w);
@@ -307,9 +309,9 @@
 	position: fixed;
 	z-index: 10;
 	top: 0;
-	right: 0;
+	right: var(--frame-x);
 	bottom: 0;
-	left: var(--rail-w);
+	left: calc(var(--rail-w) + var(--frame-x));
 	display: block;
 	overflow: clip;
 	background: var(--bg);
