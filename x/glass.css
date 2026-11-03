@@ -1,0 +1,46 @@
+:root:not(#s0):not(#s1) {
+	--bg: transparent;
+	--glass: light-dark(rgba(255, 255, 255, 0.6), rgba(12, 12, 14, 0.62));
+	--glass2: light-dark(rgba(255, 255, 255, 0.76), rgba(16, 16, 18, 0.76));
+	--rail: var(--glass);
+	--pop: var(--glass2);
+	--frost: light-dark(rgba(255, 255, 255, 0.34), rgba(255, 255, 255, 0.06));
+	--fill: light-dark(rgba(0, 0, 0, 0.06), rgba(255, 255, 255, 0.08));
+	--line: light-dark(rgba(0, 0, 0, 0.12), rgba(255, 255, 255, 0.12));
+	--hi: light-dark(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.1));
+	--ink2: light-dark(#4a4a50, #b4b4ba);
+	--ink3: light-dark(#6e6e75, #8a8a91);
+	--scrim: light-dark(rgba(255, 255, 255, 0.12), rgba(0, 0, 0, 0.22));
+	--tv-bg: transparent;
+	--blur: blur(24px) saturate(1.3);
+	--edge: inset 0 1px 0 var(--hi), inset 0 0 0 1px var(--line);
+	--lift: 0 12px 40px rgba(0, 0, 0, 0.16);
+	background: transparent;
+}
+:root:not(#s0):not(#s1) body,
+:root:not(#s0):not(#s1) #panel {
+	background: transparent;
+}
+:root:not(#s0):not(#s1) :is(#tabbar, .tn-pane, .ft) {
+	background: var(--glass);
+	backdrop-filter: var(--blur);
+	box-shadow: var(--edge);
+}
+:root:not(#s0):not(#s1) .sf-card[data-role^='omp.user'] > .sf-card-body,
+:root:not(#s0):not(#s1) :is(.sf-col[data-role^='omp.editor'], .sf-code, .sf-diff),
+:root:not(#s0):not(#s1) .sf-region .md :is(.code, .mfig, .md-html) {
+	background: var(--frost);
+	backdrop-filter: var(--blur);
+	box-shadow: inset 0 1px 0 var(--hi);
+}
+:root:not(#s0):not(#s1) :is(.tooltip, .toast, .pop, .tn-card, .tn-find, .cmdk, #cmp, .tn-crumbs, .tn-ib, .tn-op, .dlg-card, .mdl, .tn-hd, .tn-gate-card, .tn-bn-card, .cy-pill, .cy-card, .sf-ov-card, .pk-sheet),
+:root:not(#s0):not(#s1) .tn-stage > .pf,
+:root:not(#s0):not(#s1) .pf .pp.float.has:focus-within .pp-pop,
+:root:not(#s0):not(#s1).ft-over .ft {
+	background: var(--glass2);
+	backdrop-filter: var(--blur);
+	box-shadow: var(--edge), var(--lift);
+}
+:root:not(#s0):not(#s1) .tn-stage > .pf .pf-nav {
+	background: transparent;
+}
