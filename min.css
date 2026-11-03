@@ -1,0 +1,1950 @@
+*:not([data-role^='omp.bot.']):not(#s0):not(#s1),
+*:not([data-role^='omp.bot.']):not(#s0):not(#s1)::before,
+*:not([data-role^='omp.bot.']):not(#s0):not(#s1)::after {
+	all: unset;
+	box-sizing: border-box;
+}
+
+:root:not(#s0):not(#s1) {
+	--bg: light-dark(#ffffff, #0e0e0f);
+	--rail: light-dark(#f7f7f7, #121213);
+	--pop: light-dark(#ffffff, #19191b);
+	--ink: light-dark(#111113, #ededee);
+	--ink2: light-dark(#5d5d63, #a3a3a9);
+	--ink3: light-dark(#94949a, #6c6c72);
+	--line: light-dark(rgba(0, 0, 0, 0.09), rgba(255, 255, 255, 0.09));
+	--fill: light-dark(rgba(0, 0, 0, 0.045), rgba(255, 255, 255, 0.06));
+	--acc: light-dark(#2457f5, #6f95ff);
+	--on-acc: light-dark(#ffffff, #0e0e0f);
+	--scrim: light-dark(rgba(255, 255, 255, 0.5), rgba(0, 0, 0, 0.5));
+	--frost: light-dark(rgba(245, 245, 247, 0.72), rgba(38, 38, 42, 0.66));
+	--sans: Geist, system-ui, sans-serif;
+	--mn: "Geist Mono", ui-monospace, monospace;
+	--r: 2px;
+	--u: 4px;
+	--rail-w: 184px;
+	display: block;
+	height: 100%;
+	overflow: hidden;
+	color-scheme: light;
+	background: var(--bg);
+}
+:root[data-theme='dark']:not(#s0):not(#s1) {
+	color-scheme: dark;
+}
+
+:root:not(#s0):not(#s1) body {
+	display: block;
+	height: 100%;
+	overflow: hidden;
+	font: 13px/1.5 var(--sans);
+	color: var(--ink);
+	background: var(--bg);
+	-webkit-font-smoothing: antialiased;
+}
+:root:not(#s0):not(#s1) :is(div, section, article, header, footer, nav, aside, main, form, p, ul, ol, dl, dd, dt, figure, pre, blockquote, h1, h2, h3, h4, h5, h6, hr, details, summary, fieldset, table) {
+	display: block;
+}
+:root:not(#s0):not(#s1) [hidden]:not(#h), :root:not(#s0):not(#s1) :is(template, script, style, head, title, meta, link, datalist) {
+	display: none;
+}
+:root:not(#s0):not(#s1) :is(h1, h2, h3, h4, strong, b, th) {
+	font-weight: 600;
+}
+:root:not(#s0):not(#s1) :is(em, i:not(:empty)) {
+	font-style: italic;
+}
+:root:not(#s0):not(#s1) a {
+	color: var(--acc);
+	cursor: pointer;
+}
+:root:not(#s0):not(#s1) :is(code, kbd, pre, samp, .mono) {
+	font-family: var(--mn);
+}
+:root:not(#s0):not(#s1) :is(svg, img, canvas, video) {
+	display: inline-block;
+	flex: none;
+	vertical-align: middle;
+}
+:root:not(#s0):not(#s1) .ico {
+	width: 14px;
+	height: 14px;
+	fill: none;
+	stroke: currentColor;
+	stroke-width: 1.5;
+	stroke-linecap: round;
+	stroke-linejoin: round;
+}
+:root:not(#s0):not(#s1) :is(button, [role='button'], [role='tab'], [role='option'], [role='menuitem'], summary, select, label) {
+	cursor: pointer;
+}
+:root:not(#s0):not(#s1) button {
+	display: inline-flex;
+	align-items: center;
+	gap: var(--u);
+	min-height: 24px;
+	padding: 0 var(--u);
+	border-radius: var(--r);
+	color: var(--ink2);
+	white-space: nowrap;
+}
+:root:not(#s0):not(#s1) :is(button, [role='option'], [role='menuitem'], .mi, .tt, .nav-row, .pf-item):hover {
+	color: var(--ink);
+	background: var(--fill);
+}
+:root:not(#s0):not(#s1) :is(button.on, button[aria-pressed='true'], button[aria-selected='true'], [aria-selected='true'], .on[role='tab']) {
+	color: var(--ink);
+	background: var(--fill);
+}
+:root:not(#s0):not(#s1) :is(button.primary, .btn.primary, .btn.pri, button.cta) {
+	padding: 0 calc(var(--u) * 3);
+	color: var(--on-acc);
+	background: var(--acc);
+}
+:root:not(#s0):not(#s1) :is(input, textarea, select, [contenteditable='true'], [contenteditable='']) {
+	display: inline-block;
+	min-width: 0;
+	cursor: text;
+	user-select: text;
+	white-space: pre-wrap;
+	caret-color: var(--acc);
+}
+:root:not(#s0):not(#s1) :is(input, select) {
+	height: 28px;
+	padding: 0 calc(var(--u) * 2);
+	border: 1px solid var(--line);
+	border-radius: var(--r);
+	background: var(--bg);
+}
+:root:not(#s0):not(#s1) :is(input, textarea)::placeholder {
+	color: var(--ink3);
+}
+:root:not(#s0):not(#s1) :is(input, textarea, select, button):focus-visible {
+	outline: 1px solid var(--acc);
+	outline-offset: -1px;
+}
+:root:not(#s0):not(#s1) ::selection {
+	background: color-mix(in srgb, var(--acc) 28%, transparent);
+}
+:root:not(#s0):not(#s1) :is(ul, ol) {
+	padding-left: 20px;
+}
+:root:not(#s0):not(#s1) li {
+	display: list-item;
+}
+:root:not(#s0):not(#s1) ul {
+	list-style: disc;
+}
+:root:not(#s0):not(#s1) ol {
+	list-style: decimal;
+}
+:root:not(#s0):not(#s1) hr {
+	height: 1px;
+	background: var(--line);
+}
+:root:not(#s0):not(#s1) table {
+	display: table;
+	border-collapse: collapse;
+}
+:root:not(#s0):not(#s1) thead {
+	display: table-header-group;
+}
+:root:not(#s0):not(#s1) tbody {
+	display: table-row-group;
+}
+:root:not(#s0):not(#s1) tr {
+	display: table-row;
+}
+:root:not(#s0):not(#s1) :is(th, td) {
+	display: table-cell;
+	padding: var(--u) calc(var(--u) * 3) var(--u) 0;
+	border-bottom: 1px solid var(--line);
+	text-align: left;
+	vertical-align: top;
+}
+:root:not(#s0):not(#s1) pre {
+	white-space: pre;
+	overflow-x: auto;
+}
+:root:not(#s0):not(#s1) :is(.scroll, [class*='-list'], [class*='-scroll']) {
+	overflow-y: auto;
+	min-height: 0;
+}
+:root:not(#s0):not(#s1) :is(.kbd, .kbds, kbd, .sf-kbd, .fld-kbd, .hint, .mk.keys, .ck-foot) {
+	display: none;
+}
+:root:not(#s0):not(#s1) .tooltip {
+	position: fixed;
+	z-index: 1000;
+	max-width: 280px;
+	padding: 2px calc(var(--u) * 2);
+	border: 1px solid var(--line);
+	font-size: 12px;
+	color: var(--ink2);
+	background: var(--pop);
+	pointer-events: none;
+}
+:root:not(#s0):not(#s1) .toast {
+	position: fixed;
+	z-index: 99;
+	left: 50%;
+	bottom: calc(var(--u) * 6);
+	display: flex;
+	align-items: center;
+	gap: calc(var(--u) * 2);
+	padding: calc(var(--u) * 2) calc(var(--u) * 3);
+	border: 1px solid var(--line);
+	background: var(--pop);
+	transform: translateX(-50%);
+}
+:root:not(#s0):not(#s1) .pop {
+	position: fixed;
+	z-index: 95;
+	display: flex;
+	flex-direction: column;
+	min-width: 180px;
+	padding: var(--u);
+	border: 1px solid var(--line);
+	background: var(--pop);
+}
+:root:not(#s0):not(#s1) .pop :is(.mi, .mi-row) {
+	display: flex;
+	align-items: center;
+	gap: calc(var(--u) * 2);
+	height: 28px;
+	padding: 0 calc(var(--u) * 2);
+	color: var(--ink);
+	white-space: nowrap;
+}
+:root:not(#s0):not(#s1) .pop :is(.mi-sep, .sep, hr) {
+	height: 1px;
+	margin: var(--u) 0;
+	background: var(--line);
+}
+:root:not(#s0):not(#s1) .pop :is(.mi-arrow, .sub) {
+	margin-left: auto;
+}
+:root:not(#s0):not(#s1) .pop.mi-subpop {
+	position: absolute;
+}
+:root:not(#s0):not(#s1) :is(#sidebar, #statusline, #tn-ph-win, #tn-drawer, #ambient, #fps, .tn-glow, .tn-zoomring, .tn-veil, .tn-secure, .tn-pip-g, .tn-pip-grip, .tn-pip-guides, .tn-peers, .tn-host-tab, .tb-blocks, .tb-tools, .tb-sp, .tn-ib-pip), :root:not(#s0):not(#s1) .tt :is(.sub, .fc, .tn-lim, .tn-tc, .tn-num) {
+	display: none;
+}
+:root:not(#s0):not(#s1) #tabbar {
+	position: fixed;
+	z-index: 20;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	display: block;
+	width: var(--rail-w);
+	border-right: 1px solid var(--line);
+	background: var(--rail);
+}
+:root:not(#s0):not(#s1) .tb-in {
+	display: flex;
+	flex-direction: column;
+	gap: 1px;
+	height: 100%;
+	padding: calc(var(--u) * 3) calc(var(--u) * 2);
+	overflow-y: auto;
+}
+:root:not(#s0):not(#s1) .tb-tabs {
+	display: flex;
+	flex-direction: column;
+	gap: 1px;
+	margin: calc(var(--u) * 2) 0;
+}
+:root:not(#s0):not(#s1) #tabbar button {
+	display: flex;
+	align-items: center;
+	gap: calc(var(--u) * 2);
+	width: 100%;
+	height: 28px;
+	padding: 0 calc(var(--u) * 2);
+}
+:root:not(#s0):not(#s1) .tn-session-tab {
+	font-size: 11px;
+	font-weight: 500;
+	text-transform: uppercase;
+	letter-spacing: 0.04em;
+	color: var(--ink3);
+}
+:root:not(#s0):not(#s1) .tt .tx, :root:not(#s0):not(#s1) .tt .nm {
+	display: block;
+	min-width: 0;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+:root:not(#s0):not(#s1) .tt.on {
+	color: var(--ink);
+	background: var(--fill);
+	box-shadow: inset 2px 0 0 var(--acc);
+}
+:root:not(#s0):not(#s1) .tn-dk {
+	display: inline-flex;
+	flex: none;
+	width: 16px;
+	color: var(--ink3);
+}
+:root:not(#s0):not(#s1) .tn-dk-c:not(.d0) {
+	display: none;
+}
+:root:not(#s0):not(#s1) .tn-dk-c {
+	display: inline-grid;
+	place-items: center;
+	width: 16px;
+	height: 16px;
+}
+:root:not(#s0):not(#s1) .tn-dk-g {
+	display: none;
+}
+:root:not(#s0):not(#s1) .tn-pane:not(.multi) > .tn-grip {
+	display: none;
+}
+:root:not(#s0):not(#s1) #panel {
+	position: fixed;
+	z-index: 10;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: var(--rail-w);
+	display: block;
+	overflow: clip;
+	background: var(--bg);
+}
+:root:not(#s0):not(#s1) .tn-stage {
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: var(--tn-sheet, 0px);
+	display: block;
+}
+:root:not(#s0):not(#s1) .tn-pane {
+	position: absolute;
+	display: flex;
+	flex-direction: column;
+	overflow: hidden;
+	background: var(--bg);
+}
+:root:not(#s0):not(#s1) .tn-pane.off, :root:not(#s0):not(#s1) .tn-head {
+	display: none;
+}
+:root:not(#s0):not(#s1) .tn-body {
+	position: relative;
+	display: flex;
+	flex: 1;
+	min-width: 0;
+	min-height: 0;
+	overflow: hidden;
+}
+:root:not(#s0):not(#s1) .tn-stage .tn-pane.multi:not(.on) .tv {
+	opacity: 0.72;
+}
+:root:not(#s0):not(#s1) .tn-grip {
+	position: absolute;
+	z-index: 12;
+	top: 2px;
+	left: 50%;
+	display: grid;
+	place-items: center;
+	width: 28px;
+	height: 12px;
+	margin-left: -14px;
+	color: var(--ink3);
+	opacity: 0;
+	cursor: grab;
+}
+:root:not(#s0):not(#s1) .tn-pane:hover > .tn-grip {
+	opacity: 1;
+}
+:root:not(#s0):not(#s1) .tn-div {
+	position: absolute;
+	z-index: 20;
+	display: block;
+}
+:root:not(#s0):not(#s1) .tn-div.row {
+	width: 7px;
+	margin-left: -3px;
+	cursor: col-resize;
+}
+:root:not(#s0):not(#s1) .tn-div.col {
+	height: 7px;
+	margin-top: -3px;
+	cursor: row-resize;
+}
+:root:not(#s0):not(#s1) .tn-div::before {
+	content: '';
+	position: absolute;
+	display: block;
+	background: var(--line);
+}
+:root:not(#s0):not(#s1) .tn-div.row::before {
+	top: 0;
+	bottom: 0;
+	left: 3px;
+	width: 1px;
+}
+:root:not(#s0):not(#s1) .tn-div.col::before {
+	left: 0;
+	right: 0;
+	top: 3px;
+	height: 1px;
+}
+:root:not(#s0):not(#s1) :is(.tn-div:hover, .tn-div.dragging)::before {
+	background: var(--acc);
+}
+:root:not(#s0):not(#s1) .tn-empty {
+	display: none;
+}
+:root:not(#s0):not(#s1) .tn-stage.empty .tn-empty {
+	position: absolute;
+	inset: 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: calc(var(--u) * 2);
+	color: var(--ink3);
+}
+:root:not(#s0):not(#s1) :is(.tn-drop, .pk-pile, .tp, .pk-hand, .tsw, .tn-card-host, .tv-cover, .tv-back, .tv-copied, .tv-cursor.gone, .tv-pb.gone, .tn-wait:empty) {
+	display: none;
+}
+:root:not(#s0):not(#s1) .tn-pane.ended .tn-card-host {
+	position: absolute;
+	inset: 0;
+	z-index: 8;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+:root:not(#s0):not(#s1) .tn-card {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: calc(var(--u) * 2);
+	padding: calc(var(--u) * 6);
+	border: 1px solid var(--line);
+	background: var(--pop);
+}
+:root:not(#s0):not(#s1) .tv {
+	position: relative;
+	display: block;
+	flex: 1;
+	min-width: 0;
+	min-height: 0;
+	overflow: clip;
+	cursor: text;
+	color: var(--tv-fg);
+	font-family: var(--tv-font);
+	font-weight: var(--tv-weight, 400);
+	font-size: var(--tv-fs, 12px);
+	line-height: var(--tv-lh, 17px);
+	white-space: pre;
+}
+:root:not(#s0):not(#s1) .tv-grid {
+	position: absolute;
+	display: block;
+	left: var(--tv-px);
+	top: var(--tv-py);
+	right: var(--tv-aside, 0px);
+	bottom: 0;
+}
+:root:not(#s0):not(#s1) :is(.tv-rows, .tv-fx, .tv-flashes, .tv-layer, .tv-pbars) {
+	position: absolute;
+	display: block;
+	inset: 0;
+	pointer-events: none;
+}
+:root:not(#s0):not(#s1) .tv-rows {
+	pointer-events: auto;
+}
+:root:not(#s0):not(#s1) .tv-fx {
+	z-index: 2;
+}
+:root:not(#s0):not(#s1) .tv-fx.top {
+	z-index: 4;
+}
+:root:not(#s0):not(#s1) .tv-layer {
+	z-index: 6;
+}
+:root:not(#s0):not(#s1) .tv-pbars {
+	overflow: hidden;
+}
+:root:not(#s0):not(#s1) .tv-flash {
+	position: absolute;
+	display: block;
+	background: color-mix(in srgb, var(--acc) 18%, transparent);
+}
+:root:not(#s0):not(#s1) .tv-probe {
+	position: absolute;
+	left: 0;
+	top: 0;
+	visibility: hidden;
+	pointer-events: none;
+}
+:root:not(#s0):not(#s1) .tv-blocks {
+	position: absolute;
+	z-index: 1;
+	inset: 0 0 var(--tv-py, 0px) 0;
+	overflow: hidden;
+	pointer-events: none;
+	white-space: normal;
+	cursor: default;
+}
+:root:not(#s0):not(#s1) .tv-block {
+	position: absolute;
+	display: block;
+	left: 0;
+	right: var(--tv-px, 0px);
+	pointer-events: auto;
+}
+:root:not(#s0):not(#s1) .tv-block.gone {
+	visibility: hidden;
+	pointer-events: none;
+}
+:root:not(#s0):not(#s1) .tv-dock {
+	position: absolute;
+	z-index: 3;
+	left: var(--tv-px);
+	right: calc(var(--tv-px) + var(--tv-aside, 0px));
+	bottom: var(--tv-py);
+	display: flex;
+	flex-direction: column;
+	max-height: calc(100% - 2 * var(--tv-py, 0px));
+	white-space: normal;
+	cursor: default;
+}
+:root:not(#s0):not(#s1) :is(.tv-block, .tv-dock) {
+	font: 13px/1.5 var(--sans);
+	color: var(--ink);
+}
+:root:not(#s0):not(#s1) .tv.covered .tv-cover {
+	position: absolute;
+	z-index: 3;
+	inset: var(--tv-py) var(--tv-px);
+	display: flex;
+	flex-direction: column;
+	white-space: normal;
+}
+:root:not(#s0):not(#s1) .tv.covered :is(.tv-rows, .tv-blocks, .tv-fx, .tv-cursor, .tv-dock, .tv-layer, .tv-pbars) {
+	visibility: hidden;
+}
+:root:not(#s0):not(#s1) .tv-cursor {
+	position: absolute;
+	z-index: 2;
+	display: block;
+	text-align: center;
+	pointer-events: none;
+	color: var(--tv-cur-ink);
+	background: var(--tv-cur);
+}
+:root:not(#s0):not(#s1) .tv-cursor.off {
+	color: transparent;
+	background: transparent;
+}
+:root:not(#s0):not(#s1) .tv-cursor.hollow {
+	color: transparent;
+	background: transparent;
+	outline: 1px solid var(--tv-cur);
+	outline-offset: -1px;
+}
+:root:not(#s0):not(#s1) .tv-input {
+	position: absolute;
+	z-index: 3;
+	width: 2px;
+	height: var(--tv-lh, 17px);
+	overflow: hidden;
+	color: transparent;
+	caret-color: transparent;
+	opacity: 0;
+	pointer-events: none;
+}
+:root:not(#s0):not(#s1) .tv-bar {
+	position: absolute;
+	z-index: 4;
+	top: 0;
+	right: var(--tv-aside, 0px);
+	bottom: 0;
+	width: 8px;
+	visibility: hidden;
+}
+:root:not(#s0):not(#s1) .tv-bar.has {
+	visibility: visible;
+}
+:root:not(#s0):not(#s1) .tv-thumb {
+	position: absolute;
+	right: 2px;
+	width: 4px;
+	min-height: 24px;
+	background: var(--line);
+}
+:root:not(#s0):not(#s1) :is(.tv-bar:hover, .tv-bar.drag) .tv-thumb {
+	background: var(--ink3);
+}
+:root:not(#s0):not(#s1) .tv-pb {
+	position: absolute;
+	left: 0;
+	right: 0;
+	display: flex;
+	align-items: center;
+	gap: calc(var(--u) * 2);
+	height: var(--tv-lh, 17px);
+	overflow: hidden;
+	font: 11px var(--sans);
+	color: var(--ink3);
+}
+:root:not(#s0):not(#s1) .tv-pb-rule {
+	flex: 1;
+	height: 1px;
+	background: var(--line);
+}
+:root:not(#s0):not(#s1) .tn-find {
+	position: absolute;
+	z-index: 40;
+	top: calc(var(--u) * 2);
+	right: calc(var(--u) * 4);
+	display: flex;
+	align-items: center;
+	gap: var(--u);
+	padding: 2px var(--u);
+	border: 1px solid var(--line);
+	background: var(--pop);
+}
+
+:root:not(#s0):not(#s1) :is(.tn-up, .tn-kick):not(#h) {
+	display: none;
+}
+:root:not(#s0):not(#s1) :is(#pal, #pick, #dlg, .tn-hd-back, .tn-gate) {
+	position: fixed;
+	z-index: 95;
+	inset: 0;
+	display: block;
+	background: var(--scrim);
+}
+:root:not(#s0):not(#s1) :is(#thm, #glass) {
+	position: fixed;
+	z-index: 93;
+	inset: 0;
+	display: block;
+}
+:root:not(#s0):not(#s1) :is(.cmdk, #cmp, .tn-crumbs, .tn-ib, .tn-op, .dlg-card, .mdl, .tn-hd, .tn-gate-card, .tn-bn-card, .cy-pill, .cy-card) {
+	display: flex;
+	flex-direction: column;
+	overflow: hidden;
+	border: 1px solid var(--line);
+	color: var(--ink);
+	background: var(--pop);
+}
+:root:not(#s0):not(#s1) :is(.cmdk, .tn-op, .dlg-card, .tn-hd, .tn-gate-card) {
+	position: absolute;
+	top: 12vh;
+	left: 50%;
+	width: min(600px, calc(100vw - 48px));
+	max-height: 76vh;
+	transform: translateX(-50%);
+}
+:root:not(#s0):not(#s1) :is(.tn-op, .dlg-card, .tn-hd, .tn-gate-card) {
+	width: min(440px, calc(100vw - 48px));
+	padding: calc(var(--u) * 4);
+	gap: calc(var(--u) * 3);
+}
+:root:not(#s0):not(#s1) #pick.anchored .cmdk {
+	transform: none;
+}
+:root:not(#s0):not(#s1) :is(#cmp, .tn-crumbs, .tn-ib) {
+	position: fixed;
+	z-index: 95;
+	max-height: 60vh;
+}
+:root:not(#s0):not(#s1) :is(.ck-top, .tn-cmp-q, .tn-crumbs-q, .tn-ib-head) {
+	display: flex;
+	flex: none;
+	align-items: center;
+	gap: calc(var(--u) * 2);
+	height: 44px;
+	padding: 0 calc(var(--u) * 4);
+	border-bottom: 1px solid var(--line);
+}
+:root:not(#s0):not(#s1) :is(.ck-top, .tn-cmp-q, .tn-crumbs-q) input {
+	flex: 1;
+	height: 100%;
+	padding: 0;
+	border: 0;
+	font-size: 14px;
+	background: transparent;
+	outline: none;
+}
+:root:not(#s0):not(#s1) :is(.tn-pl-scopes, .ck-tabs) {
+	display: flex;
+	flex: none;
+	gap: var(--u);
+	padding: var(--u) calc(var(--u) * 3);
+	border-bottom: 1px solid var(--line);
+	overflow-x: auto;
+}
+:root:not(#s0):not(#s1) .tn-pl-scope[aria-selected='true'] {
+	color: var(--acc);
+}
+:root:not(#s0):not(#s1) :is(.ck-list, .tn-cmp-list, .tn-crumbs-list, .tn-ib-list) {
+	flex: 0 1 auto;
+	max-height: min(440px, 58vh);
+	padding: var(--u);
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+:root:not(#s0):not(#s1) :is(.ck-group, .tn-cmp-g, .tn-ib-gh) {
+	padding: calc(var(--u) * 3) calc(var(--u) * 2) var(--u);
+	font-size: 11px;
+	font-weight: 500;
+	color: var(--ink3);
+}
+:root:not(#s0):not(#s1) :is(.ck-item, .tn-cmp-row, .tn-crumbs-row, .tn-ib-row, .pp-item) {
+	display: flex;
+	align-items: center;
+	gap: calc(var(--u) * 3);
+	min-height: 32px;
+	padding: 0 calc(var(--u) * 2);
+	color: var(--ink2);
+	cursor: pointer;
+}
+:root:not(#s0):not(#s1) :is(.ck-item, .tn-cmp-row, .tn-ib-row)[aria-selected='true'] {
+	color: var(--ink);
+	background: var(--fill);
+	box-shadow: inset 2px 0 0 var(--acc);
+}
+:root:not(#s0):not(#s1) :is(.ck-ic, .tn-cmp-ic, .tn-ib-ic, .tn-pk-ic) {
+	display: inline-grid;
+	flex: none;
+	place-items: center;
+	width: 16px;
+	color: var(--ink3);
+}
+:root:not(#s0):not(#s1) :is(.ck-label, .tn-ib-t) {
+	flex: 1;
+	min-width: 0;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+:root:not(#s0):not(#s1) .ck-label mark {
+	font-weight: 600;
+	color: var(--ink);
+}
+:root:not(#s0):not(#s1) .ck-sub {
+	margin-left: calc(var(--u) * 2);
+	font-size: 11px;
+	color: var(--ink3);
+}
+:root:not(#s0):not(#s1) :is(.tn-pl-acts, .tn-ib-x) {
+	display: none;
+}
+:root:not(#s0):not(#s1) :is(.tn-pl-empty, .ck-empty, .tn-ib-empty) {
+	padding: calc(var(--u) * 8) calc(var(--u) * 4);
+	text-align: center;
+	color: var(--ink3);
+}
+:root:not(#s0):not(#s1) :is(.mdl-layer) {
+	position: absolute;
+	z-index: 90;
+	inset: 0;
+	display: flex;
+	align-items: flex-start;
+	justify-content: center;
+	padding: calc(var(--u) * 12) calc(var(--u) * 6);
+	background: var(--scrim);
+}
+:root:not(#s0):not(#s1) .mdl {
+	width: 100%;
+	max-width: 520px;
+	max-height: 100%;
+}
+:root:not(#s0):not(#s1) :is(.mdl-head, .dlg-head) {
+	display: flex;
+	align-items: center;
+	gap: calc(var(--u) * 3);
+	padding: calc(var(--u) * 4) calc(var(--u) * 4) calc(var(--u) * 2);
+	font-size: 14px;
+	font-weight: 600;
+}
+:root:not(#s0):not(#s1) :is(.mdl-titles, .dlg-ttl) {
+	flex: 1;
+	min-width: 0;
+}
+:root:not(#s0):not(#s1) :is(.mdl-sub, .dlg-text, .dlg-note), :root:not(#s0):not(#s1) .dlg-ttl .s {
+	font-size: 12px;
+	font-weight: 400;
+	color: var(--ink3);
+}
+:root:not(#s0):not(#s1) :is(.mdl-body, .dlg-body, .fm-sec, .fm-rows, .fm-cell, .tn-hd-step, .tn-gate-acts, .dlg-field) {
+	display: flex;
+	flex-direction: column;
+	gap: calc(var(--u) * 3);
+	min-height: 0;
+}
+:root:not(#s0):not(#s1) :is(.mdl-body, .dlg-body) {
+	padding: var(--u) calc(var(--u) * 4) calc(var(--u) * 4);
+	overflow-y: auto;
+}
+:root:not(#s0):not(#s1) :is(.mdl-foot, .dlg-foot, .tn-hd-foot, .fm-row, .fm-ctl, .dlg-seg, .tn-op-head, .tn-op-row) {
+	display: flex;
+	align-items: center;
+	gap: calc(var(--u) * 2);
+}
+:root:not(#s0):not(#s1) :is(.mdl-foot, .dlg-foot) {
+	justify-content: flex-end;
+	padding: calc(var(--u) * 3) calc(var(--u) * 4);
+	border-top: 1px solid var(--line);
+}
+:root:not(#s0):not(#s1) :is(.mdl-lead, .dlg-keys) {
+	margin-right: auto;
+}
+:root:not(#s0):not(#s1) :is(.mdl-err, .dlg-err, .tn-hd-err, .tn-gate-err) {
+	font-size: 12px;
+	color: light-dark(#c0392b, #ff7b72);
+}
+:root:not(#s0):not(#s1) .dlg-err:not(.on) {
+	display: none;
+}
+:root:not(#s0):not(#s1) :is(.btn, .mdl-go, .dlg-go), :root:not(#s0):not(#s1) .tn-hd-foot button {
+	height: 28px;
+	padding: 0 calc(var(--u) * 3);
+	border: 1px solid var(--line);
+	color: var(--ink);
+}
+:root:not(#s0):not(#s1) :is(.mdl-go, .dlg-go, .btn.primary, .btn.pri) {
+	border-color: var(--acc);
+	color: var(--on-acc);
+	background: var(--acc);
+}
+:root:not(#s0):not(#s1) :is(.tn-pq-busy, .tn-pq-gone, .tn-pq-done), :root:not(#s0):not(#s1) .tn-hd-stp .mk .ico {
+	display: none;
+}
+:root:not(#s0):not(#s1) #banners {
+	position: fixed;
+	z-index: 94;
+	top: calc(var(--u) * 3);
+	right: calc(var(--u) * 3);
+	display: flex;
+	flex-direction: column;
+	gap: calc(var(--u) * 2);
+	width: 340px;
+}
+:root:not(#s0):not(#s1) .tn-bn-card {
+	flex-direction: row;
+	align-items: center;
+	gap: calc(var(--u) * 3);
+	padding: calc(var(--u) * 3);
+}
+:root:not(#s0):not(#s1) #carly {
+	position: fixed;
+	z-index: 96;
+	top: calc(var(--u) * 3);
+	right: calc(var(--u) * 3);
+	display: flex;
+	flex-direction: column;
+	gap: calc(var(--u) * 2);
+	width: 400px;
+}
+:root:not(#s0):not(#s1) .cy-pill {
+	flex-direction: row;
+	align-items: center;
+	gap: calc(var(--u) * 2);
+	height: 40px;
+	padding: 0 calc(var(--u) * 3);
+}
+:root:not(#s0):not(#s1) .tn-carly :is(.cy-glow, .cy-blob, .cy-spin, .cy-tick, .cy-close) {
+	display: none;
+}
+:root:not(#s0):not(#s1) #carly .cy-log {
+	max-height: 50vh;
+	padding: calc(var(--u) * 3);
+	overflow-y: auto;
+}
+:root:not(#s0):not(#s1) .tn-rename {
+	display: flex;
+	flex-direction: column;
+	gap: calc(var(--u) * 2);
+	width: 300px;
+	padding: calc(var(--u) * 2);
+}
+:root:not(#s0):not(#s1) .tn-rename-s {
+	display: flex;
+	gap: calc(var(--u) * 3);
+	font-size: 11px;
+	color: var(--ink3);
+}
+:root:not(#s0):not(#s1) :is(.tn-hd-head, .tn-gate-head) {
+	display: flex;
+	align-items: flex-start;
+	gap: calc(var(--u) * 3);
+}
+:root:not(#s0):not(#s1) :is(.tn-hd-t, .mdl-t, .tn-gate-t), :root:not(#s0):not(#s1) .dlg-ttl .t {
+	font-size: 14px;
+	font-weight: 600;
+}
+:root:not(#s0):not(#s1) :is(.tn-hd-s, .tn-gate-s, .tn-hd-none) {
+	font-size: 12px;
+	color: var(--ink3);
+}
+:root:not(#s0):not(#s1) .tn-hd-f {
+	display: flex;
+	align-items: center;
+	gap: calc(var(--u) * 2);
+}
+:root:not(#s0):not(#s1) .tn-hd-l {
+	width: 56px;
+	flex: none;
+	font-size: 12px;
+	color: var(--ink2);
+}
+:root:not(#s0):not(#s1) .tn-hd-in {
+	flex: 1;
+}
+:root:not(#s0):not(#s1) .tn-hd-sec {
+	font-size: 11px;
+	font-weight: 600;
+	color: var(--ink3);
+}
+:root:not(#s0):not(#s1) .tn-hd-foot {
+	justify-content: flex-end;
+}
+:root:not(#s0):not(#s1) .tn-hd-foot .btn:last-child {
+	border-color: var(--acc);
+	color: var(--on-acc);
+	background: var(--acc);
+}
+:root:not(#s0):not(#s1) .pop .sub {
+	color: var(--ink3);
+}
+:root:not(#s0):not(#s1) .tn-tc-sws {
+	display: flex;
+	gap: 2px;
+	margin-left: auto;
+}
+:root:not(#s0):not(#s1) .tn-tc-sw {
+	display: grid;
+	place-items: center;
+	width: 20px;
+	height: 20px;
+	padding: 0;
+	border-radius: 50%;
+}
+:root:not(#s0):not(#s1) .tn-tc-sw::after {
+	content: '';
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	background: var(--tc, transparent);
+	box-shadow: inset 0 0 0 1px var(--line);
+}
+:root:not(#s0):not(#s1) .tn-tc-sw.on {
+	box-shadow: 0 0 0 1px var(--ink3);
+}
+:root:not(#s0):not(#s1) .sld {
+	display: inline-flex;
+	align-items: center;
+	gap: calc(var(--u) * 2);
+}
+:root:not(#s0):not(#s1) .sld-track {
+	display: flex;
+	align-items: center;
+	width: 112px;
+	height: 20px;
+	padding: 0 6px;
+	cursor: pointer;
+}
+:root:not(#s0):not(#s1) .sld-bar {
+	position: relative;
+	flex: 1;
+	height: 2px;
+	background: var(--line);
+}
+:root:not(#s0):not(#s1) .sld-fill {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	background: var(--acc);
+}
+:root:not(#s0):not(#s1) .sld-thumb {
+	position: absolute;
+	top: -5px;
+	width: 12px;
+	height: 12px;
+	margin-left: -6px;
+	border: 1px solid var(--ink3);
+	border-radius: 50%;
+	background: var(--pop);
+}
+:root:not(#s0):not(#s1) .sld-v {
+	min-width: 36px;
+	font: 12px var(--mn);
+	text-align: right;
+	color: var(--ink2);
+}
+:root:not(#s0):not(#s1) .tn-card-row {
+	display: flex;
+	gap: calc(var(--u) * 2);
+}
+:root:not(#s0):not(#s1) .pf {
+	display: none;
+	position: relative;
+	flex: 1;
+	min-width: 0;
+	min-height: 0;
+}
+:root:not(#s0):not(#s1) .pf.on {
+	display: flex;
+}
+:root:not(#s0):not(#s1) .tn-stage > .pf {
+	position: absolute;
+	z-index: 30;
+	top: 0;
+	bottom: 0;
+	left: 100%;
+	width: var(--tn-sheet);
+	border-left: 1px solid var(--line);
+	background: var(--bg);
+}
+:root:not(#s0):not(#s1) .tn-pf-grip {
+	position: absolute;
+	z-index: 6;
+	top: 0;
+	bottom: 0;
+	left: -4px;
+	width: 7px;
+	cursor: col-resize;
+}
+:root:not(#s0):not(#s1) :is(.pf-top, .pf-back, .pf-mark, .nav-head, .pf-sub, .pf-chev, .pf-eyebrow, .pf-dot, .pf-reset, .pf-name, .pf-chord-x, .pf-add, .pf-editor, .pp-pop, .pp-git) {
+	display: none;
+}
+:root:not(#s0):not(#s1) .pf.sheet {
+	flex-direction: column;
+}
+:root:not(#s0):not(#s1) .pf-nav {
+	display: flex;
+	flex: none;
+	flex-direction: column;
+	gap: calc(var(--u) * 2);
+	padding: calc(var(--u) * 3) calc(var(--u) * 4);
+	border-bottom: 1px solid var(--line);
+	background: var(--rail);
+}
+:root:not(#s0):not(#s1) :is(.pf-brand, .pf-search, .pf-status, .pf-item, .pf-inline, .pf-part-h, .tn-pf-val, .pp-field) {
+	display: flex;
+	align-items: center;
+	gap: calc(var(--u) * 2);
+}
+:root:not(#s0):not(#s1) .pf-brand {
+	height: 28px;
+	padding: 0 calc(var(--u) * 2);
+	font-weight: 600;
+}
+:root:not(#s0):not(#s1) .pf-close {
+	margin-left: auto;
+}
+:root:not(#s0):not(#s1) :is(.pf-search, .pp-field, .tn-pf-val) {
+	height: 28px;
+	padding: 0 calc(var(--u) * 2);
+	border: 1px solid var(--line);
+	border-radius: var(--r);
+	color: var(--ink3);
+	background: var(--bg);
+}
+:root:not(#s0):not(#s1) :is(.pf-search, .pp-field, .tn-pf-val) input {
+	flex: 1;
+	height: 100%;
+	padding: 0;
+	border: 0;
+	outline: none;
+}
+:root:not(#s0):not(#s1) :is(.pf-groups, .pf-group, .pf-items) {
+	display: flex;
+	flex-wrap: wrap;
+	gap: var(--u);
+}
+:root:not(#s0):not(#s1) .pf-group + .pf-group {
+	padding-left: var(--u);
+	border-left: 1px solid var(--line);
+}
+:root:not(#s0):not(#s1) .pf-nav .nav-row {
+	justify-content: center;
+	width: 28px;
+	height: 28px;
+	padding: 0;
+}
+:root:not(#s0):not(#s1) .pf-nav .nav-row .pf-txt {
+	display: none;
+}
+:root:not(#s0):not(#s1) .pf-nav .nav-row.on {
+	color: var(--acc);
+	background: var(--fill);
+}
+:root:not(#s0):not(#s1) .pf-nav .nav-row.off {
+	opacity: 0.4;
+}
+:root:not(#s0):not(#s1) .pf-nav .nav-row .meta {
+	margin-left: auto;
+	font-size: 11px;
+	color: var(--acc);
+}
+:root:not(#s0):not(#s1) .pf-scroll {
+	flex: 1;
+	min-width: 0;
+	min-height: 0;
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+:root:not(#s0):not(#s1) .pf-doc {
+	padding: calc(var(--u) * 5) calc(var(--u) * 5) calc(var(--u) * 10);
+}
+:root:not(#s0):not(#s1) .pf-title {
+	font-size: 15px;
+	font-weight: 600;
+}
+:root:not(#s0):not(#s1) :is(.pf-lead, .pf-hint, .pf-empty), :root:not(#s0):not(#s1) .pf-lbl .h, :root:not(#s0):not(#s1) .pf-ml .d {
+	font-size: 12px;
+	color: var(--ink3);
+}
+:root:not(#s0):not(#s1) :is(.pf-sec, .pf-part) {
+	margin-top: calc(var(--u) * 6);
+}
+:root:not(#s0):not(#s1) .pf-sec-t {
+	margin-bottom: calc(var(--u) * 2);
+	font-size: 11px;
+	font-weight: 600;
+	text-transform: uppercase;
+	letter-spacing: 0.04em;
+	color: var(--ink3);
+}
+:root:not(#s0):not(#s1) .pf-rows > * + * {
+	border-top: 1px solid var(--line);
+}
+:root:not(#s0):not(#s1) .pf-row {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: calc(var(--u) * 2) calc(var(--u) * 4);
+	min-height: 44px;
+	padding: calc(var(--u) * 2) 0;
+}
+:root:not(#s0):not(#s1) .pf-row.stack {
+	flex-direction: column;
+	align-items: stretch;
+}
+:root:not(#s0):not(#s1) .pf-row.off {
+	opacity: 0.5;
+}
+:root:not(#s0):not(#s1) .pf-row.focus {
+	outline: 1px solid var(--acc);
+}
+:root:not(#s0):not(#s1) .pf-lbl {
+	flex: 1 1 180px;
+	min-width: 0;
+}
+:root:not(#s0):not(#s1) :is(.pf-ctl, .pf-btns, .pf-chips, .pf-seg, .pf-step, .pf-chord) {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: calc(var(--u) * 2);
+}
+:root:not(#s0):not(#s1) .pf-ctl {
+	flex: 0 1 auto;
+	min-width: 0;
+	max-width: 100%;
+	margin-left: auto;
+}
+:root:not(#s0):not(#s1) .pf-row.stack :is(.pf-lbl, .pf-ctl) {
+	flex: none;
+	margin-left: 0;
+}
+:root:not(#s0):not(#s1) :is(.pf-in, .pf-area) {
+	width: 220px;
+	max-width: 100%;
+	height: 28px;
+	padding: 0 calc(var(--u) * 2);
+	border: 1px solid var(--line);
+	border-radius: var(--r);
+	background: var(--bg);
+}
+:root:not(#s0):not(#s1) .pf-area {
+	width: 100%;
+	height: 140px;
+	padding: calc(var(--u) * 2);
+	overflow: auto;
+	font-family: var(--mn);
+	font-size: 12px;
+}
+:root:not(#s0):not(#s1) :is(.pf-seg, .pf-step) {
+	gap: 0;
+	border: 1px solid var(--line);
+	border-radius: var(--r);
+}
+:root:not(#s0):not(#s1) .pf-seg button + button {
+	border-left: 1px solid var(--line);
+}
+:root:not(#s0):not(#s1) :is(.pf-seg, .mode-seg, .dlg-seg) button.on {
+	color: var(--acc);
+	background: var(--fill);
+}
+:root:not(#s0):not(#s1) .pf-step .v {
+	min-width: 72px;
+	font-size: 12px;
+	text-align: center;
+}
+:root:not(#s0):not(#s1) .pf-sw {
+	position: relative;
+	display: block;
+	flex: none;
+	width: 28px;
+	height: 16px;
+	border-radius: 8px;
+	background: var(--line);
+	cursor: pointer;
+}
+:root:not(#s0):not(#s1) .pf-sw .knob {
+	position: absolute;
+	top: 2px;
+	left: 2px;
+	width: 12px;
+	height: 12px;
+	border-radius: 50%;
+	background: #ffffff;
+}
+:root:not(#s0):not(#s1) .pf-sw.on {
+	background: var(--acc);
+}
+:root:not(#s0):not(#s1) .pf-sw.on .knob {
+	left: 14px;
+}
+:root:not(#s0):not(#s1) :is(.pf-chip, .tn-pg-t, .tn-sz, .tn-ps-o) {
+	border: 1px solid var(--line);
+	border-radius: var(--r);
+	padding: var(--u) calc(var(--u) * 2);
+	cursor: pointer;
+}
+:root:not(#s0):not(#s1) :is(.pf-chip, .tn-pg-t, .tn-sz, .tn-ps-o):is(.on, .sel) {
+	border-color: var(--acc);
+	color: var(--acc);
+}
+:root:not(#s0):not(#s1) .pf-menu {
+	position: absolute;
+	z-index: 40;
+	top: calc(100% + var(--u));
+	right: 0;
+	max-height: 340px;
+	overflow-y: auto;
+}
+:root:not(#s0):not(#s1) .pf .pp.float.has:focus-within .pp-pop {
+	position: absolute;
+	z-index: 60;
+	top: calc(100% + var(--u));
+	left: 0;
+	right: 0;
+	display: block;
+	border: 1px solid var(--line);
+	background: var(--pop);
+}
+:root:not(#s0):not(#s1) :is(.pp, .pf-pop) {
+	position: relative;
+}
+:root:not(#s0):not(#s1) :is(.tn-pg, .tn-szs) {
+	display: grid;
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+	gap: calc(var(--u) * 2);
+}
+:root:not(#s0):not(#s1) .pf-dl {
+	display: grid;
+	grid-template-columns: 110px 1fr;
+	gap: var(--u) calc(var(--u) * 4);
+	font-size: 12px;
+}
+:root:not(#s0):not(#s1) .pf-dl dt {
+	color: var(--ink3);
+}
+
+:root:not(#s0):not(#s1) .tn-pg-t {
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+:root:not(#s0):not(#s1) .tn-pg-t:not(.on) .tn-pg-n .ico {
+	display: none;
+}
+:root:not(#s0):not(#s1) :is(.sf-hidden, .sf-void, .sf-t-hide, .sf-toast, .sf-brand, .sf-folded, .sf-thought-gone, .sf-gut, .sf-kv-sep, .sf-tool-bar, .sf-ed-mode, .sf-cut, .sf-drop, .md-hide, .mfig-src, .pk-cur, .pk-scopebtn, .sf-tbl-probe, .off.sf-tbl-h, .off.sf-tbl-c):not(#h) {
+	display: none;
+}
+:root:not(#s0):not(#s1) .sf-region {
+	position: relative;
+	display: block;
+	min-width: 0;
+	font: 13px/20px var(--sans);
+	color: var(--ink);
+}
+:root:not(#s0):not(#s1) .sf-main {
+	display: flex;
+	flex-direction: column;
+	gap: calc(var(--u) * 4);
+	padding: calc(var(--u) * 2) 0;
+	user-select: text;
+}
+:root:not(#s0):not(#s1) .sf-chat-reader.sf-main {
+	max-width: 760px;
+	margin: 0 auto;
+	padding: calc(var(--u) * 2) calc(var(--u) * 3);
+}
+:root:not(#s0):not(#s1) :is(.sf-col, .sf-dock, .sf-section, .sf-card-body, .sf-section-body, .sf-tool-body) {
+	display: flex;
+	flex-direction: column;
+	gap: calc(var(--u) * 2);
+	min-width: 0;
+}
+:root:not(#s0):not(#s1) .sf-dock {
+	gap: var(--u);
+}
+:root:not(#s0):not(#s1) .sf-dock .sf-col > * {
+	flex: none;
+}
+:root:not(#s0):not(#s1) :is(.sf-row, .sf-card-head, .sf-section-head, .sf-tool-head, .sf-st-row, .sf-st-l, .sf-st-r, .sf-status, .sf-seg, .sf-chip, .sf-badge, .sf-spinner, .sf-progress, .sf-place, .sf-item, .sf-kv, .sf-kbd) {
+	display: flex;
+	align-items: center;
+	gap: calc(var(--u) * 2);
+	min-width: 0;
+}
+:root:not(#s0):not(#s1) .sf-row > * {
+	min-width: 0;
+}
+:root:not(#s0):not(#s1) .wrap.sf-row {
+	flex-wrap: wrap;
+}
+:root:not(#s0):not(#s1) .gap-none {
+	gap: 0;
+}
+:root:not(#s0):not(#s1) .gap-xs {
+	gap: 2px;
+}
+:root:not(#s0):not(#s1) .gap-sm {
+	gap: var(--u);
+}
+:root:not(#s0):not(#s1) .gap-md {
+	gap: calc(var(--u) * 2);
+}
+:root:not(#s0):not(#s1) .gap-lg {
+	gap: calc(var(--u) * 4);
+}
+:root:not(#s0):not(#s1) .al-start {
+	align-items: flex-start;
+}
+:root:not(#s0):not(#s1) .al-end {
+	align-items: flex-end;
+}
+:root:not(#s0):not(#s1) .al-baseline {
+	align-items: baseline;
+}
+:root:not(#s0):not(#s1) .al-stretch {
+	align-items: stretch;
+}
+:root:not(#s0):not(#s1) .js-between {
+	justify-content: space-between;
+}
+:root:not(#s0):not(#s1) .js-end {
+	justify-content: flex-end;
+}
+:root:not(#s0):not(#s1) .ta-center {
+	text-align: center;
+}
+:root:not(#s0):not(#s1) .sf-text {
+	display: block;
+	min-width: 0;
+	white-space: pre-wrap;
+	overflow-wrap: anywhere;
+}
+:root:not(#s0):not(#s1) .nowrap.sf-text {
+	overflow: hidden;
+	white-space: pre;
+	text-overflow: ellipsis;
+}
+:root:not(#s0):not(#s1) .sf-spacer {
+	display: block;
+	flex: none;
+	height: calc(var(--u) * 2);
+}
+:root:not(#s0):not(#s1) :is(.sf-t-muted, .sf-section-head, .sf-tool-head) {
+	color: var(--ink2);
+}
+:root:not(#s0):not(#s1) :is(.sf-t-dim, .sf-chip, .sf-badge, .sf-status, .sf-chev, .sf-elapsed, .sf-rate) {
+	color: var(--ink3);
+}
+:root:not(#s0):not(#s1) .sf-t-strong {
+	font-weight: 600;
+}
+:root:not(#s0):not(#s1) :is(.sf-t-accent, .sf-t-info, .sf-t-link, .sf-link) {
+	color: var(--acc);
+}
+:root:not(#s0):not(#s1) :is(.sf-t-mono, .sf-t-num, .sf-t-path, .sf-t-code, .sf-t-key, .sf-elapsed, .sf-rate) {
+	font-family: var(--mn);
+	font-size: 12px;
+}
+:root:not(#s0):not(#s1) :is(.sf-t-success, .sf-t-ins) {
+	color: light-dark(#1f8a4c, #6fcf97);
+}
+:root:not(#s0):not(#s1) :is(.sf-t-warning) {
+	color: light-dark(#a86200, #e0b050);
+}
+:root:not(#s0):not(#s1) :is(.sf-t-error, .sf-t-del) {
+	color: light-dark(#c0392b, #ff7b72);
+}
+:root:not(#s0):not(#s1) :is(.sf-icon, .sf-card-ic, .sf-chev, .sf-item-ic, .sf-tool-ic, .sf-seg-ic, .sf-tree-ic, .sf-block-ic) {
+	display: inline-grid;
+	flex: none;
+	place-items: center;
+	width: 16px;
+	height: 16px;
+}
+:root:not(#s0):not(#s1) .collapsed > :is(.sf-card-head, .sf-section-head, .sf-tool-head) .sf-chev {
+	transform: rotate(-90deg);
+}
+:root:not(#s0):not(#s1) .collapsed.nopreview > :is(.sf-card-body, .sf-tool-body), :root:not(#s0):not(#s1) .collapsed > .sf-section-body {
+	display: none;
+}
+:root:not(#s0):not(#s1) .collapsible > :is(.sf-card-head, .sf-section-head, .sf-tool-head) {
+	cursor: pointer;
+}
+:root:not(#s0):not(#s1) .sf-card {
+	position: relative;
+	display: block;
+	flex: none;
+	border: 1px solid var(--line);
+}
+:root:not(#s0):not(#s1) .sf-card-head {
+	min-height: 32px;
+	padding: var(--u) calc(var(--u) * 3);
+}
+:root:not(#s0):not(#s1) .sf-card-body {
+	padding: 0 calc(var(--u) * 3) calc(var(--u) * 3);
+}
+:root:not(#s0):not(#s1) .nohead.sf-card > .sf-card-body {
+	padding: calc(var(--u) * 3);
+}
+:root:not(#s0):not(#s1) .bare.sf-card {
+	border: 0;
+}
+:root:not(#s0):not(#s1) .bare.sf-card > .sf-card-body {
+	padding: 0;
+}
+:root:not(#s0):not(#s1) .sf-section-body {
+	padding-left: calc(var(--u) * 4);
+	border-left: 1px solid var(--line);
+}
+:root:not(#s0):not(#s1) .sf-tool {
+	display: flex;
+	flex-direction: column;
+	gap: var(--u);
+}
+:root:not(#s0):not(#s1) .sf-tool-head {
+	min-height: 24px;
+	font-size: 12px;
+}
+:root:not(#s0):not(#s1) .sf-rule {
+	display: flex;
+	align-items: center;
+	gap: calc(var(--u) * 2);
+	font-size: 12px;
+	color: var(--ink3);
+}
+:root:not(#s0):not(#s1) .sf-rule::before, :root:not(#s0):not(#s1) .sf-rule::after {
+	content: '';
+	flex: 1;
+	height: 1px;
+	background: var(--line);
+}
+:root:not(#s0):not(#s1) :is(.sf-chip, .sf-badge) {
+	height: 18px;
+	font-size: 11px;
+	white-space: nowrap;
+}
+:root:not(#s0):not(#s1) :is(.sf-more, .sf-ansi-more, .sf-code-more, .sf-tool-more) {
+	display: none;
+	align-self: flex-start;
+	font-size: 12px;
+	color: var(--ink3);
+	cursor: pointer;
+}
+:root:not(#s0):not(#s1) :is(.sf-ansi-more, .sf-code-more), :root:not(#s0):not(#s1) .clamped > :is(.sf-more, .sf-tool-more) {
+	display: inline-flex;
+}
+:root:not(#s0):not(#s1) .clamped > :is(.sf-card-body, .sf-code-body) {
+	overflow: hidden;
+	max-height: var(--sf-clamp);
+}
+:root:not(#s0):not(#s1) :is(.sf-code, .sf-diff, .sf-ansi, .sf-rows) {
+	position: relative;
+	display: block;
+	min-width: 0;
+	font: 12px/18px var(--mn);
+	user-select: text;
+}
+:root:not(#s0):not(#s1) :is(.sf-code, .sf-diff) {
+	flex-shrink: 0;
+	border: 1px solid var(--line);
+	border-radius: var(--r);
+}
+:root:not(#s0):not(#s1) .sf-code-head {
+	display: flex;
+	align-items: center;
+	gap: calc(var(--u) * 2);
+	height: 28px;
+	padding: 0 calc(var(--u) * 3);
+	border-bottom: 1px solid var(--line);
+	font-size: 11px;
+	color: var(--ink2);
+}
+:root:not(#s0):not(#s1) .sf-code-body {
+	padding: calc(var(--u) * 2) calc(var(--u) * 3);
+	overflow-x: auto;
+}
+:root:not(#s0):not(#s1) :is(.sf-ln, .sf-dl) {
+	display: flex;
+	white-space: pre;
+}
+:root:not(#s0):not(#s1) .wrap.sf-code .sf-ln {
+	white-space: pre-wrap;
+}
+:root:not(#s0):not(#s1) .sf-dg {
+	flex: none;
+	width: calc(var(--sf-gw) + 14px);
+	padding-right: calc(var(--u) * 2);
+	text-align: right;
+	color: var(--ink3);
+}
+:root:not(#s0):not(#s1) .numbers.sf-code .sf-gut {
+	display: block;
+	padding-right: calc(var(--u) * 2);
+	color: var(--ink3);
+}
+:root:not(#s0):not(#s1) .scroll.sf-ansi {
+	overflow-y: auto;
+}
+:root:not(#s0):not(#s1) .sf-tbl {
+	display: flex;
+	flex-direction: column;
+	min-width: 0;
+}
+:root:not(#s0):not(#s1) .sf-tbl-body {
+	display: flex;
+	flex-direction: column;
+	grid-template-columns: inherit;
+	min-width: 0;
+}
+:root:not(#s0):not(#s1) .sf-tbl-row {
+	display: grid;
+	grid-template-columns: inherit;
+	min-width: 0;
+}
+:root:not(#s0):not(#s1) :is(.sf-tbl-h, .sf-tbl-c) {
+	display: block;
+	min-width: 0;
+	padding: 0 7px;
+	line-height: 20px;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	border-bottom: 1px solid var(--line);
+}
+:root:not(#s0):not(#s1) .sf-tbl-h {
+	font-size: 11px;
+	font-weight: 500;
+	color: var(--ink3);
+}
+:root:not(#s0):not(#s1) .sf-region .md {
+	display: block;
+	min-width: 0;
+	overflow-wrap: anywhere;
+}
+:root:not(#s0):not(#s1) .sf-region .md :is(p, ul, ol, blockquote, pre, .tbl, .code, .mfig) {
+	margin: 0 0 calc(var(--u) * 3);
+}
+:root:not(#s0):not(#s1) .sf-region .md > :last-child {
+	margin-bottom: 0;
+}
+:root:not(#s0):not(#s1) .sf-region .md :is(h1, h2, h3, h4) {
+	margin: calc(var(--u) * 4) 0 calc(var(--u) * 2);
+	line-height: 1.35;
+}
+:root:not(#s0):not(#s1) .sf-region .md h1 {
+	font-size: 18px;
+}
+:root:not(#s0):not(#s1) .sf-region .md h2 {
+	font-size: 16px;
+}
+:root:not(#s0):not(#s1) .sf-region .md li {
+	margin-bottom: var(--u);
+}
+:root:not(#s0):not(#s1) .sf-region .md li > .li-t {
+	display: block;
+}
+:root:not(#s0):not(#s1) .sf-region .md .br {
+	display: block;
+}
+:root:not(#s0):not(#s1) .sf-region .md blockquote {
+	padding-left: calc(var(--u) * 3);
+	border-left: 2px solid var(--line);
+	color: var(--ink2);
+}
+:root:not(#s0):not(#s1) .sf-region .md :not(pre) > code {
+	padding: 0 var(--u);
+	border-radius: var(--r);
+	font-size: 0.9em;
+	background: var(--fill);
+}
+:root:not(#s0):not(#s1) .sf-region .md :is(.code, .mfig, .md-html) {
+	display: block;
+	overflow: hidden;
+	border: 1px solid var(--line);
+	border-radius: var(--r);
+}
+:root:not(#s0):not(#s1) .sf-region .md :is(.code-head, .mfig-head, .code-out-foot) {
+	display: flex;
+	align-items: center;
+	gap: var(--u);
+	height: 28px;
+	padding: 0 var(--u) 0 calc(var(--u) * 3);
+	border-bottom: 1px solid var(--line);
+	font: 11px var(--mn);
+	color: var(--ink3);
+}
+:root:not(#s0):not(#s1) .sf-region .md :is(.code-head, .mfig-head) > span:first-child {
+	flex: 1;
+}
+:root:not(#s0):not(#s1) .sf-region .md .code pre {
+	padding: calc(var(--u) * 3);
+	font: 12px/18px var(--mn);
+}
+:root:not(#s0):not(#s1) .sf-region .md :is(.tbl, .mfig-body, .math-display) {
+	display: block;
+	overflow-x: auto;
+}
+:root:not(#s0):not(#s1) .sf-card[data-role^='omp.user'] {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+	border: 0;
+}
+:root:not(#s0):not(#s1) .sf-card[data-role^='omp.user'] > .sf-card-body {
+	max-width: 80%;
+	padding: calc(var(--u) * 2) calc(var(--u) * 3);
+	border-radius: var(--r);
+	background: var(--frost);
+	backdrop-filter: blur(16px) saturate(1.4);
+}
+:root:not(#s0):not(#s1) :is([data-role='omp.turn.usage'], [data-role='omp.user.tools']) {
+	display: none;
+}
+:root:not(#s0):not(#s1) .sf-editor, :root:not(#s0):not(#s1) .sf-input {
+	position: relative;
+	display: flex;
+	flex: none;
+	align-items: flex-start;
+	gap: calc(var(--u) * 2);
+	min-width: 0;
+	cursor: text;
+}
+:root:not(#s0):not(#s1) .sf-input {
+	align-items: center;
+	height: 28px;
+	padding: 0 calc(var(--u) * 2);
+	border: 1px solid var(--line);
+	border-radius: var(--r);
+}
+:root:not(#s0):not(#s1) .sf-ed-scroll {
+	display: block;
+	flex: 1;
+	min-width: 0;
+}
+:root:not(#s0):not(#s1) .sf-ed-text {
+	position: relative;
+	display: block;
+	min-height: var(--sf-lh, 20px);
+	white-space: pre-wrap;
+	overflow-wrap: anywhere;
+	user-select: text;
+}
+:root:not(#s0):not(#s1) .sf-ed-ph {
+	position: absolute;
+	top: 0;
+	left: 0;
+	color: var(--ink3);
+	pointer-events: none;
+}
+:root:not(#s0):not(#s1) .sf-caret {
+	display: inline-block;
+	width: 2px;
+	height: var(--sf-lh, 20px);
+	margin-right: -2px;
+	vertical-align: top;
+	background: var(--acc);
+}
+:root:not(#s0):not(#s1) :is(.readonly, .selecting) .sf-caret {
+	visibility: hidden;
+}
+:root:not(#s0):not(#s1) .sf-col[data-role^='omp.editor'] {
+	gap: calc(var(--u) * 2);
+	padding: calc(var(--u) * 3);
+	border: 1px solid var(--line);
+	border-radius: var(--r);
+	background: var(--frost);
+	backdrop-filter: blur(16px) saturate(1.4);
+}
+:root:not(#s0):not(#s1) .sf-col[data-role^='omp.editor']:focus-within {
+	border-color: var(--acc);
+}
+:root:not(#s0):not(#s1) .sf-col[data-role^='omp.editor'] .sf-editor {
+	--sf-lh: 22px;
+	font-size: 14px;
+	line-height: 22px;
+}
+:root:not(#s0):not(#s1) [data-role='omp.composer.line'] > .sf-editor {
+	flex: 1 1 auto;
+}
+:root:not(#s0):not(#s1) :is([data-role='omp.composer.model'], [data-role='omp.composer.effort'], [data-role='omp.composer.thinking']) {
+	height: 24px;
+	padding: 0 calc(var(--u) * 2);
+	border: 1px solid var(--line);
+	border-radius: var(--r);
+	font-size: 12px;
+	color: var(--ink2);
+	cursor: pointer;
+}
+:root:not(#s0):not(#s1) [data-role='omp.composer.thinking'] {
+	margin-right: auto;
+}
+:root:not(#s0):not(#s1) [data-role='omp.composer.context'] {
+	display: none;
+}
+:root:not(#s0):not(#s1) [data-role='omp.composer.send'] .kbd {
+	display: inline-grid;
+	place-items: center;
+	width: 28px;
+	height: 28px;
+	color: var(--on-acc);
+	background: var(--acc);
+}
+:root:not(#s0):not(#s1) [data-role='omp.composer.stop'] {
+	width: 28px;
+	height: 28px;
+	margin-left: auto;
+	font-size: 0;
+	background: var(--acc);
+	cursor: pointer;
+}
+:root:not(#s0):not(#s1) .sf-status {
+	height: 22px;
+	overflow: hidden;
+	white-space: nowrap;
+	font: 11px var(--mn);
+}
+:root:not(#s0):not(#s1) .sf-st-r {
+	margin-left: auto;
+}
+:root:not(#s0):not(#s1) .sf-seg {
+	gap: var(--u);
+	padding: 0 var(--u);
+}
+:root:not(#s0):not(#s1) .sf-layer {
+	position: absolute;
+	inset: 0;
+	pointer-events: none;
+}
+:root:not(#s0):not(#s1) .sf-layer > * {
+	pointer-events: auto;
+}
+:root:not(#s0):not(#s1) .sf-overlay {
+	position: absolute;
+	inset: 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: calc(var(--u) * 3);
+	pointer-events: none;
+}
+:root:not(#s0):not(#s1) .at-top.sf-overlay {
+	padding-top: calc(var(--u) * 10);
+}
+:root:not(#s0):not(#s1) .at-bottom.sf-overlay {
+	justify-content: flex-end;
+}
+:root:not(#s0):not(#s1) .sf-ov-dim {
+	position: absolute;
+	inset: 0;
+	background: var(--scrim);
+	pointer-events: auto;
+}
+:root:not(#s0):not(#s1) :is(.sf-ov-card, .pk-sheet) {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	width: min(480px, 100%);
+	max-height: 100%;
+	min-height: 0;
+	border: 1px solid var(--line);
+	overflow: hidden;
+	color: var(--ink);
+	background: var(--pop);
+	pointer-events: auto;
+}
+:root:not(#s0):not(#s1) :is(.at-caret, .at-node) > .sf-ov-card {
+	position: absolute;
+	width: 420px;
+}
+:root:not(#s0):not(#s1) .sf-ov-head {
+	display: flex;
+	flex: none;
+	align-items: center;
+	gap: calc(var(--u) * 2);
+	min-height: 40px;
+	padding: 0 calc(var(--u) * 4);
+	border-bottom: 1px solid var(--line);
+	font-weight: 600;
+}
+:root:not(#s0):not(#s1) .sf-ov-body {
+	display: flex;
+	flex-direction: column;
+	flex: 1;
+	min-height: 0;
+	padding: var(--u);
+	overflow-y: auto;
+}
+:root:not(#s0):not(#s1) .sf-item {
+	overflow: hidden;
+	white-space: nowrap;
+	min-height: 28px;
+	padding: 0 calc(var(--u) * 2);
+	cursor: pointer;
+}
+:root:not(#s0):not(#s1) .sf-item:is(.sel, .on, :hover) {
+	background: var(--fill);
+}
+:root:not(#s0):not(#s1) .sf-picker {
+	position: absolute;
+	inset: 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: calc(var(--u) * 8) calc(var(--u) * 4);
+	pointer-events: none;
+}
+:root:not(#s0):not(#s1) .sz-screen.sf-picker {
+	position: relative;
+	flex: 1;
+	height: 100%;
+	padding: 0;
+}
+:root:not(#s0):not(#s1) .sf-picker .pk-sheet {
+	width: min(680px, 100%);
+	height: min(540px, 100%);
+}
+:root:not(#s0):not(#s1) .sz-screen.sf-picker .pk-sheet {
+	width: 100%;
+	height: 100%;
+	border: 0;
+}
+:root:not(#s0):not(#s1) :is(.pk-head, .pk-bar, .pk-foot) {
+	display: flex;
+	flex: none;
+	align-items: center;
+	gap: calc(var(--u) * 2);
+	min-height: 44px;
+	padding: 0 calc(var(--u) * 4);
+	border-bottom: 1px solid var(--line);
+}
+:root:not(#s0):not(#s1) :is(.pk-bar, .pk-foot) {
+	border-top: 1px solid var(--line);
+	border-bottom: 0;
+}
+:root:not(#s0):not(#s1) :is(.pk-body, .pk-center) {
+	display: flex;
+	flex: 1;
+	min-height: 0;
+}
+:root:not(#s0):not(#s1) :is(.pk-main, .pk-list) {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	flex: 1;
+	min-width: 0;
+	min-height: 0;
+	overflow-y: auto;
+}
+:root:not(#s0):not(#s1) .pk-row {
+	position: relative;
+	display: flex;
+	flex: none;
+	align-items: center;
+	gap: calc(var(--u) * 3);
+	min-height: 32px;
+	padding: 0 calc(var(--u) * 3);
+	white-space: nowrap;
+	cursor: pointer;
+}
+:root:not(#s0):not(#s1) .pk-row:is(.sel, .on) {
+	background: var(--fill);
+	box-shadow: inset 2px 0 0 var(--acc);
+}
+:root:not(#s0):not(#s1) .grp.pk-row {
+	font-size: 11px;
+	color: var(--ink3);
+	cursor: default;
+}
+:root:not(#s0):not(#s1) .pk-pv {
+	display: flex;
+	flex-direction: column;
+	flex: none;
+	width: 300px;
+	padding: calc(var(--u) * 4);
+	overflow-y: auto;
+	border-left: 1px solid var(--line);
+}
+:root:not(#s0):not(#s1) .pv-hide .pk-pv {
+	display: none;
+}
+:root:not(#s0):not(#s1) :is(.pk-btn, .pk-esc) {
+	height: 26px;
+	padding: 0 calc(var(--u) * 2);
+	border: 1px solid var(--line);
+	cursor: pointer;
+}
+:root:not(#s0):not(#s1) .pk-btn.pri, :root:not(#s0):not(#s1) .pk-btn.primary {
+	color: var(--on-acc);
+	background: var(--acc);
+}
+
+:root:not(#s0):not(#s1) :is(.sf-caption, .sf-deco) {
+	min-width: 0;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	font-size: 12px;
+	color: var(--ink3);
+}
+:root:not(#s0):not(#s1) .sf-act {
+	cursor: pointer;
+}
+:root:not(#s0):not(#s1) .sf-unfocused .sf-col[data-role^='omp.editor'] .sf-editor {
+	opacity: 0;
+}
+:root:not(#s0):not(#s1) .capped.sf-editor .sf-ed-scroll {
+	overflow-y: auto;
+}
+:root:not(#s0):not(#s1) .sf-img-svg {
+	color: var(--ink);
+	fill: currentColor;
+}
+:root:not(#s0):not(#s1) .tv-dock > .sf-dock.sf-chat-reader {
+	width: 100%;
+	max-width: 760px;
+	margin: 0 auto;
+	padding: 0 calc(var(--u) * 3) calc(var(--u) * 3);
+}
