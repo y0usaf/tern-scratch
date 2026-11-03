@@ -7,7 +7,7 @@
 
 :root:not(#s0):not(#s1) {
 	--bg: light-dark(#ffffff, #0e0e0f);
-	--rail: light-dark(#f7f7f7, #121213);
+	--rail: var(--bg);
 	--pop: light-dark(#ffffff, #19191b);
 	--ink: light-dark(#111113, #ededee);
 	--ink2: light-dark(#5d5d63, #a3a3a9);
@@ -238,7 +238,6 @@
 	bottom: 0;
 	display: block;
 	width: var(--rail-w);
-	border-right: 1px solid var(--line);
 	background: var(--rail);
 }
 :root:not(#s0):not(#s1) .tb-in {
