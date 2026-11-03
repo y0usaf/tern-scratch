@@ -1940,6 +1940,25 @@
 	font-size: 12px;
 	color: var(--ink3);
 }
+:root:not(#s0):not(#s1) .sf-caption {
+	display: none;
+}
+:root:not(#s0):not(#s1) .sf-unfocused .sf-caption {
+	display: block;
+}
+:root:not(#s0):not(#s1) [data-role='omp.working'] {
+	min-width: 0;
+	white-space: nowrap;
+}
+:root:not(#s0):not(#s1) [data-role='omp.working'] > * {
+	flex: none;
+}
+:root:not(#s0):not(#s1) [data-role='omp.working'] > .sf-shimmer {
+	flex: 0 1 auto;
+	min-width: 0;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
 :root:not(#s0):not(#s1) .sf-act {
 	cursor: pointer;
 }
