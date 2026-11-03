@@ -1,0 +1,139 @@
+:root:not(#s0):not(#s1) {
+	--bg: #ffffff;
+	--rail: #ffffff;
+	--pop: #ffffff;
+	--ink: #000000;
+	--ink2: #000000;
+	--ink3: #8a8a8a;
+	--line: #000000;
+	--acc: #d71921;
+	--on-acc: #ffffff;
+	--fill: radial-gradient(circle, #9a9a9a 0.5px, transparent 1.0px) 0 0 / 3px 3px;
+	--frost: radial-gradient(circle, #b4b4b4 0.6px, transparent 1.1px) 0 0 / 6px 6px, #ffffff;
+	--scrim: radial-gradient(circle, #ffffff 1.1px, transparent 1.6px) 0 0 / 3px 3px;
+	--dz-half: radial-gradient(circle, #000000 1.2px, transparent 1.7px) 0 0 / 4px 4px;
+	--warn: #000000;
+	--bad: #d71921;
+	--dot: Doto, var(--mn);
+	--spark-track: var(--ink);
+}
+:root:not(#s0):not(#s1)[data-theme='dark'] {
+	--bg: #000000;
+	--rail: #000000;
+	--pop: #000000;
+	--ink: #ffffff;
+	--ink2: #ffffff;
+	--ink3: #7a7a7a;
+	--line: #ffffff;
+	--acc: #ff2b2b;
+	--on-acc: #ffffff;
+	--fill: radial-gradient(circle, #6a6a6a 0.5px, transparent 1.0px) 0 0 / 3px 3px;
+	--frost: radial-gradient(circle, #5a5a5a 0.6px, transparent 1.1px) 0 0 / 6px 6px, #000000;
+	--scrim: radial-gradient(circle, #000000 1.1px, transparent 1.6px) 0 0 / 3px 3px;
+	--dz-half: radial-gradient(circle, #ffffff 1.2px, transparent 1.7px) 0 0 / 4px 4px;
+	--warn: #ffffff;
+	--bad: #ff2b2b;
+}
+:root:not(#s0):not(#s1) .tv {
+	--tv-bg: var(--bg);
+	--tv-fg: var(--ink);
+	--tv-cur: var(--acc);
+	--tv-cur-ink: #ffffff;
+	--tv-sel-a: color-mix(in srgb, var(--acc) 22%, var(--bg));
+	--tv-sel-b: color-mix(in srgb, var(--acc) 22%, var(--bg));
+}
+:root:not(#s0):not(#s1) ::selection {
+	color: #ffffff;
+	background: var(--acc);
+}
+:root:not(#s0):not(#s1) :is(.tn-session-tab, .pf-sec-t) {
+	font: 700 13px/1 var(--dot);
+	letter-spacing: 0.12em;
+	color: var(--ink);
+}
+:root:not(#s0):not(#s1) .sf-region .md :is(h1, h2, h3) {
+	font-family: var(--dot);
+	font-weight: 800;
+	letter-spacing: 0.04em;
+}
+:root:not(#s0):not(#s1) .sf-region .md h1 {
+	font-size: 26px;
+}
+:root:not(#s0):not(#s1) .sf-region .md h2 {
+	font-size: 21px;
+}
+:root:not(#s0):not(#s1) .sf-region .md h3 {
+	font-size: 17px;
+}
+:root:not(#s0):not(#s1) hr {
+	height: 0;
+	border-top: 1px dotted var(--ink);
+	background: none;
+}
+:root:not(#s0):not(#s1) .pf-rows > * + * {
+	border-top: 1px dotted var(--ink);
+}
+:root:not(#s0):not(#s1) .sf-region .md :is(th, td) {
+	border-bottom: 1px dotted var(--ink);
+}
+:root:not(#s0):not(#s1) .sf-card[data-role^='omp.user'] > .sf-card-body {
+	border: 1px solid var(--ink);
+	border-radius: 14px 14px 2px 14px;
+	backdrop-filter: none;
+}
+:root:not(#s0):not(#s1) .sf-col[data-role^='omp.editor'] {
+	border-color: var(--ink);
+	border-radius: 14px;
+	backdrop-filter: none;
+}
+:root:not(#s0):not(#s1) .sf-region .md :not(pre) > code {
+	background: none;
+	box-shadow: inset 0 0 0 1px var(--ink);
+}
+:root:not(#s0):not(#s1) .sf-caret {
+	width: 7px;
+	height: 7px;
+	margin: 0 -4px 0 -3px;
+	vertical-align: -4px;
+	border-radius: 50%;
+	animation: dot-blink 1s steps(1) infinite;
+}
+@keyframes dot-blink {
+	50% {
+		opacity: 0;
+	}
+}
+:root:not(#s0):not(#s1).tn-status footer#statusline > span.sl-plugins > span.sl-plugin[data-tone='time'] {
+	font-family: var(--dot);
+	font-weight: 800;
+	color: var(--ink);
+}
+:root:not(#s0):not(#s1).tn-status footer#statusline > span.sl-plugins > span.sl-plugin[data-tone^='m-'] {
+	font-family: var(--dot);
+	font-weight: 800;
+}
+:root:not(#s0):not(#s1).tn-status footer#statusline > span.sl-plugins > span.sl-plugin[data-tone^='m-']::after {
+	content: "";
+	width: 7px;
+	height: 7px;
+	margin-left: 8px;
+	border-radius: 50%;
+	box-shadow: inset 0 0 0 1px var(--ink);
+}
+:root:not(#s0):not(#s1).tn-status footer#statusline > span.sl-plugins > span.sl-plugin[data-tone^='m-'][data-tone*='-warm']::after {
+	background: var(--ink);
+}
+:root:not(#s0):not(#s1).tn-status footer#statusline > span.sl-plugins > span.sl-plugin[data-tone^='m-'][data-tone*='-hot']::after {
+	background: var(--acc);
+	box-shadow: none;
+}
+:root:not(#s0):not(#s1).tn-status footer#statusline > span.sl-plugins > span.sl-plugin[data-tone^='spark-'] {
+	--spark-c: var(--ink);
+	position: relative;
+}
+:root:not(#s0):not(#s1).tn-status footer#statusline > span.sl-plugins > span.sl-plugin[data-tone^='spark-']::after {
+	content: "";
+	position: absolute;
+	inset: 0;
+	background: radial-gradient(circle, transparent 1.3px, var(--bg) 1.8px) 0 0 / 4px 4px;
+}
