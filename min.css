@@ -227,7 +227,7 @@
 :root:not(#s0):not(#s1) .pop.mi-subpop {
 	position: absolute;
 }
-:root:not(#s0):not(#s1) :is(#sidebar, #statusline, #tn-ph-win, #tn-drawer, #ambient, #fps, .tn-glow, .tn-zoomring, .tn-veil, .tn-secure, .tn-pip-g, .tn-pip-grip, .tn-pip-guides, .tn-peers, .tn-host-tab, .tb-blocks, .tb-tools, .tb-sp, .tn-ib-pip), :root:not(#s0):not(#s1) .tt :is(.sub, .fc, .tn-lim, .tn-tc, .tn-num) {
+:root:not(#s0):not(#s1) :is(#sidebar, #statusline, #tn-ph-win, #tn-drawer, #ambient, #fps, .tn-glow, .tn-zoomring, .tn-veil, .tn-secure, .tn-pip-g, .tn-pip-grip, .tn-pip-guides, .tn-peers, .tn-host-tab, .tb-blocks, .tb-tools, .tb-sp, .tn-ib-pip, .sf-rows-mark), :root:not(#s0):not(#s1) .tt :is(.sub, .fc, .tn-lim, .tn-tc, .tn-num) {
 	display: none;
 }
 :root:not(#s0):not(#s1) #tabbar {
@@ -242,8 +242,9 @@
 	background: var(--rail);
 }
 :root:not(#s0):not(#s1) .tb-in {
-	display: flex;
-	flex-direction: column;
+	display: grid;
+	grid-template-columns: minmax(0, 1fr);
+	align-content: start;
 	gap: 1px;
 	height: 100%;
 	padding: calc(var(--u) * 3) calc(var(--u) * 2);
@@ -1733,12 +1734,22 @@
 	background: var(--acc);
 }
 :root:not(#s0):not(#s1) [data-role='omp.composer.stop'] {
-	width: 28px;
-	height: 28px;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 24px;
+	height: 24px;
 	margin-left: auto;
+	border: 1px solid var(--line);
+	border-radius: var(--r);
 	font-size: 0;
-	background: var(--acc);
 	cursor: pointer;
+}
+:root:not(#s0):not(#s1) [data-role='omp.composer.stop']::before {
+	content: '';
+	width: 8px;
+	height: 8px;
+	background: var(--ink2);
 }
 :root:not(#s0):not(#s1) .sf-status {
 	height: 22px;
