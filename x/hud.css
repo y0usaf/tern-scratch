@@ -1,0 +1,238 @@
+:root:not(#s0):not(#s1) {
+	--bg: #f3f6f8;
+	--rail: var(--bg);
+	--pop: #f6f9fb;
+	--ink: #0d1b24;
+	--ink2: #4a5d69;
+	--ink3: #8597a3;
+	--line: rgba(20, 70, 100, 0.14);
+	--tick: rgba(20, 70, 100, 0.42);
+	--fill: rgba(20, 70, 100, 0.045);
+	--acc: #0089b8;
+	--on-acc: #f3f6f8;
+	--scrim: rgba(243, 246, 248, 0.78);
+	--frost: rgba(20, 90, 130, 0.035);
+	--glow: rgba(0, 137, 184, 0.28);
+	--warn: var(--ink2);
+	--bad: var(--ink);
+	--sans: Geist, system-ui, sans-serif;
+	--mn: "Geist Mono", ui-monospace, monospace;
+	--r: 0px;
+	--ticks: linear-gradient(var(--tick), var(--tick)) 0 0 / 9px 1px no-repeat, linear-gradient(var(--tick), var(--tick)) 0 0 / 1px 9px no-repeat, linear-gradient(var(--tick), var(--tick)) 100% 0 / 9px 1px no-repeat, linear-gradient(var(--tick), var(--tick)) 100% 0 / 1px 9px no-repeat, linear-gradient(var(--tick), var(--tick)) 0 100% / 9px 1px no-repeat, linear-gradient(var(--tick), var(--tick)) 0 100% / 1px 9px no-repeat, linear-gradient(var(--tick), var(--tick)) 100% 100% / 9px 1px no-repeat, linear-gradient(var(--tick), var(--tick)) 100% 100% / 1px 9px no-repeat;
+	--ticks-on: linear-gradient(var(--acc), var(--acc)) 0 0 / 9px 1px no-repeat, linear-gradient(var(--acc), var(--acc)) 0 0 / 1px 9px no-repeat, linear-gradient(var(--acc), var(--acc)) 100% 0 / 9px 1px no-repeat, linear-gradient(var(--acc), var(--acc)) 100% 0 / 1px 9px no-repeat, linear-gradient(var(--acc), var(--acc)) 0 100% / 9px 1px no-repeat, linear-gradient(var(--acc), var(--acc)) 0 100% / 1px 9px no-repeat, linear-gradient(var(--acc), var(--acc)) 100% 100% / 9px 1px no-repeat, linear-gradient(var(--acc), var(--acc)) 100% 100% / 1px 9px no-repeat;
+}
+:root:not(#s0):not(#s1)[data-theme='dark'] {
+	--bg: #050709;
+	--rail: var(--bg);
+	--pop: #070a0d;
+	--ink: #d6e4ec;
+	--ink2: #8a9ea9;
+	--ink3: #52646e;
+	--line: rgba(160, 215, 240, 0.11);
+	--tick: rgba(160, 215, 240, 0.4);
+	--fill: rgba(160, 215, 240, 0.04);
+	--acc: #6fe3ff;
+	--on-acc: #031015;
+	--scrim: rgba(3, 5, 7, 0.8);
+	--frost: rgba(160, 215, 240, 0.035);
+	--glow: rgba(111, 227, 255, 0.35);
+}
+
+:root:not(#s0):not(#s1) body {
+	font-weight: 300;
+	letter-spacing: 0.01em;
+}
+:root:not(#s0):not(#s1) :is(h1, h2, h3, h4, strong, b, th) {
+	font-weight: 500;
+}
+:root:not(#s0):not(#s1) ::selection {
+	color: var(--ink);
+	background: color-mix(in srgb, var(--acc) 22%, transparent);
+}
+:root:not(#s0):not(#s1) :is(input, textarea, select, button):focus-visible {
+	outline: 1px solid var(--acc);
+	box-shadow: 0 0 6px var(--glow);
+}
+
+:root:not(#s0):not(#s1) :is(.tn-session-tab, .ck-group, .tn-cmp-g, .tn-ib-gh, .pf-sec-t, .grp.pk-row, .sf-code-head, .sf-section-head, .sf-card-head, .sf-badge, .sf-chip) {
+	font: 400 10px/1.6 var(--mn);
+	text-transform: uppercase;
+	letter-spacing: 0.22em;
+	color: var(--ink3);
+}
+:root:not(#s0):not(#s1) .sf-region .md :is(.code-head, .mfig-head, .code-out-foot) {
+	font-size: 10px;
+	text-transform: uppercase;
+	letter-spacing: 0.22em;
+	border-bottom: 0;
+	background: linear-gradient(to right, var(--line), var(--line)) 0 100% / 100% 1px no-repeat;
+}
+
+:root:not(#s0):not(#s1) #tabbar button {
+	font-weight: 300;
+	color: var(--ink2);
+}
+:root:not(#s0):not(#s1) #tabbar button:is(.on, [aria-selected='true'], [aria-pressed='true']) {
+	color: var(--ink);
+	background: var(--fill);
+	box-shadow: inset 1px 0 0 var(--acc), -2px 0 6px -2px var(--glow);
+}
+:root:not(#s0):not(#s1) :is(button, [role='option'], [role='menuitem'], .mi, .tt, .nav-row, .pf-item):hover {
+	background: var(--fill);
+}
+
+:root:not(#s0):not(#s1) .tn-pane {
+	position: absolute;
+}
+:root:not(#s0):not(#s1) .tn-pane.multi::after {
+	content: '';
+	position: absolute;
+	z-index: 40;
+	inset: 6px;
+	display: block;
+	pointer-events: none;
+	background: var(--ticks);
+}
+:root:not(#s0):not(#s1) .tn-pane.multi.on::after {
+	background: var(--ticks-on);
+	filter: drop-shadow(0 0 3px var(--glow));
+}
+:root:not(#s0):not(#s1) .tn-stage .tn-pane.multi:not(.on) .tv {
+	opacity: 0.6;
+}
+
+:root:not(#s0):not(#s1) .tv {
+	--tv-bg: var(--bg);
+	--tv-cur: var(--acc);
+	--tv-cur-ink: var(--on-acc);
+	--tv-sel-a: color-mix(in srgb, var(--acc) 22%, var(--bg));
+	--tv-sel-b: color-mix(in srgb, var(--acc) 22%, var(--bg));
+}
+:root:not(#s0):not(#s1) .tv-cursor {
+	box-shadow: 0 0 6px var(--glow);
+}
+:root:not(#s0):not(#s1) .tv-cursor:is(.off, .hollow) {
+	box-shadow: none;
+}
+
+:root:not(#s0):not(#s1) :is(.cmdk, #cmp, .tn-crumbs, .tn-ib, .tn-op, .dlg-card, .mdl, .tn-hd, .tn-gate-card, .tn-bn-card) {
+	border: 0;
+	background: var(--ticks), var(--pop);
+	box-shadow: 0 24px 64px -24px var(--scrim);
+}
+:root:not(#s0):not(#s1) :is(.ck-item, .tn-cmp-row, .tn-ib-row, .pk-row)[aria-selected='true'], :root:not(#s0):not(#s1) .pk-row:is(.sel, .on) {
+	background: var(--fill);
+	box-shadow: inset 1px 0 0 var(--acc);
+}
+:root:not(#s0):not(#s1) .cmdk input:focus-visible {
+	outline: 0;
+	box-shadow: none;
+	background: linear-gradient(var(--acc), var(--acc)) 0 100% / 100% 1px no-repeat;
+}
+:root:not(#s0):not(#s1) .cmdk input {
+	border: 0;
+	background: linear-gradient(var(--line), var(--line)) 0 100% / 100% 1px no-repeat;
+	font-weight: 300;
+	letter-spacing: 0.02em;
+}
+
+:root:not(#s0):not(#s1) .sf-col[data-role^='omp.editor'] {
+	border: 0;
+	background: var(--ticks), var(--frost);
+	backdrop-filter: blur(10px);
+}
+:root:not(#s0):not(#s1) .sf-col[data-role^='omp.editor']:focus-within {
+	background: var(--ticks-on), var(--frost);
+}
+:root:not(#s0):not(#s1) .sf-caret {
+	width: 1px;
+	background: var(--acc);
+	box-shadow: 0 0 5px var(--glow);
+}
+:root:not(#s0):not(#s1) :is([data-role='omp.composer.model'], [data-role='omp.composer.effort'], [data-role='omp.composer.thinking']) {
+	border: 0;
+	padding: 0 6px;
+	font: 400 10px/1.6 var(--mn);
+	text-transform: uppercase;
+	letter-spacing: 0.14em;
+	background: linear-gradient(var(--tick), var(--tick)) 0 0 / 4px 1px no-repeat, linear-gradient(var(--tick), var(--tick)) 0 0 / 1px 4px no-repeat, linear-gradient(var(--tick), var(--tick)) 100% 0 / 4px 1px no-repeat, linear-gradient(var(--tick), var(--tick)) 100% 0 / 1px 4px no-repeat, linear-gradient(var(--tick), var(--tick)) 0 100% / 4px 1px no-repeat, linear-gradient(var(--tick), var(--tick)) 0 100% / 1px 4px no-repeat, linear-gradient(var(--tick), var(--tick)) 100% 100% / 4px 1px no-repeat, linear-gradient(var(--tick), var(--tick)) 100% 100% / 1px 4px no-repeat;
+}
+:root:not(#s0):not(#s1) .sf-card[data-role^='omp.user'] > .sf-card-body {
+	background: var(--ticks), var(--frost);
+	backdrop-filter: blur(10px);
+}
+:root:not(#s0):not(#s1) .sf-region .md :not(pre) > code {
+	background: none;
+	box-shadow: inset 0 -1px 0 var(--line);
+}
+:root:not(#s0):not(#s1) .sf-region .md .code {
+	border: 0;
+	background: var(--ticks);
+}
+:root:not(#s0):not(#s1) .sf-region .sf-card {
+	border: 0;
+	box-shadow: none;
+}
+:root:not(#s0):not(#s1) [data-role^='omp.working'] {
+	color: var(--acc);
+}
+
+:root:not(#s0):not(#s1) .sf-chat-reader .sf-md {
+	animation: hud-scan 520ms cubic-bezier(0.2, 0.6, 0.2, 1) both;
+}
+@keyframes hud-scan {
+	from {
+		opacity: 0;
+		clip-path: inset(0 0 100% 0);
+	}
+	to {
+		opacity: 1;
+		clip-path: inset(0 0 0 0);
+	}
+}
+@media (prefers-reduced-motion: reduce) {
+	:root:not(#s0):not(#s1) .sf-chat-reader .sf-md {
+		animation: none;
+	}
+}
+
+:root:not(#s0):not(#s1).tn-status footer#statusline {
+	font-weight: 300;
+	color: var(--ink3);
+}
+:root:not(#s0):not(#s1).tn-status footer#statusline > span.sl-plugins > span.sl-plugin[data-tone='time'] {
+	font: 200 3em/1 var(--sans);
+	letter-spacing: 0.06em;
+	color: var(--ink);
+}
+:root:not(#s0):not(#s1).tn-status footer#statusline > span.sl-plugins > span.sl-plugin[data-tone='date'] {
+	font: 400 10px/1.6 var(--mn);
+	text-transform: uppercase;
+	letter-spacing: 0.32em;
+}
+:root:not(#s0):not(#s1).tn-status footer#statusline > span.sl-plugins > span.sl-plugin[data-tone^='m-'] {
+	font-weight: 200;
+	font-size: 26px;
+}
+:root:not(#s0):not(#s1).tn-status footer#statusline > span.sl-plugins > span.sl-plugin[data-tone^='m-']::before {
+	font: 400 9.5px/1.6 var(--mn);
+	letter-spacing: 0.28em;
+}
+:root:not(#s0):not(#s1).tn-status footer#statusline > span.sl-plugins > span.sl-plugin[data-tone^='m-cpu'] {
+	border-top: 0;
+	background: linear-gradient(var(--tick), var(--tick)) 0 0 / 9px 1px no-repeat, linear-gradient(var(--tick), var(--tick)) 100% 0 / 9px 1px no-repeat;
+}
+:root:not(#s0):not(#s1).tn-status footer#statusline > span.sl-plugins > span.sl-plugin[data-tone^='spark-'] {
+	position: relative;
+	--spark-track: var(--line);
+}
+:root:not(#s0):not(#s1).tn-status footer#statusline > span.sl-plugins > span.sl-plugin[data-tone^='spark-']::after {
+	content: '';
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: -7px;
+	height: 4px;
+	display: block;
+	background: repeating-linear-gradient(to right, var(--tick) 0 1px, transparent 1px 10%), linear-gradient(var(--line), var(--line)) 0 0 / 100% 1px no-repeat;
+}
