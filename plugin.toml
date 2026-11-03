@@ -1,0 +1,8 @@
+schema = 1
+id = "scratch"
+name = "Scratch"
+version = "0.1.0"
+description = "Unsets every built-in Tern style and rebuilds the whole UI from one sheet: sharp, flat, hairline, one accent; frost only on the composer and user messages."
+icon = "layers"
+window = "window.luau"
+styles = ["scratch.css"]
