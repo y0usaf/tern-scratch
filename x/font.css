@@ -1,0 +1,35 @@
+:root:not(#s0):not(#s1), :root:not(#s0):not(#s1) body {
+	--sans: "Rec Sans", "Recursive Sans Linear Static", system-ui, sans-serif;
+	--mn: "Rec Mono", "Rec Mono Linear", "Recursive Mono Linear Static", ui-monospace, monospace;
+	--code-font: "Rec Mono", "Rec Mono Linear", "Recursive Mono Linear Static", ui-monospace, monospace;
+}
+:root:not(#s0):not(#s1) [data-role^='omp.assistant'] {
+	--sans: "Rec Sans Semicasual", "Recursive Sans Casual Static", "Rec Sans", system-ui, sans-serif;
+	font-family: var(--sans);
+}
+:root:not(#s0):not(#s1) .tv {
+	--tv-font: "Rec Mono", "Rec Mono Linear", "Recursive Mono Linear Static", ui-monospace, monospace;
+	font-family: var(--tv-font);
+}
+:root:not(#s0):not(#s1) [data-role='omp.working.label'],
+:root:not(#s0):not(#s1) [data-role='omp.working'] .sf-shimmer,
+:root:not(#s0):not(#s1) .tt.working .nm,
+:root:not(#s0):not(#s1) .tn-vt-host.busy .nm {
+	animation: rec-breathe 2.4s ease-in-out infinite alternate;
+}
+@keyframes rec-breathe {
+	from {
+		font-weight: 400;
+	}
+	to {
+		font-weight: 620;
+	}
+}
+@media (prefers-reduced-motion: reduce) {
+	:root:not(#s0):not(#s1) [data-role='omp.working.label'],
+	:root:not(#s0):not(#s1) [data-role='omp.working'] .sf-shimmer,
+	:root:not(#s0):not(#s1) .tt.working .nm,
+	:root:not(#s0):not(#s1) .tn-vt-host.busy .nm {
+		animation: none;
+	}
+}
