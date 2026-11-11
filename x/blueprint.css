@@ -1,0 +1,75 @@
+:root:not(#s0):not(#s1) {
+	--bg: #edf1f6;
+	--rail: #e5ebf3;
+	--pop: #f4f7fb;
+	--ink: #0f2137;
+	--ink2: #3d5470;
+	--ink3: #6e85a0;
+	--line: rgba(20, 62, 118, 0.18);
+	--fill: rgba(20, 62, 118, 0.06);
+	--acc: #1456b8;
+	--on-acc: #f4f7fb;
+	--frost: rgba(235, 241, 249, 0.48);
+	--frost-blur: blur(44px) saturate(1.35);
+	--sans: Geist, system-ui, sans-serif;
+	--mn: "Iosevka Term Slab", "Iosevka Pixel Slab", "Ioskeley Mono Term", monospace;
+	--tv-font: "Iosevka Term Slab", "Ioskeley Mono Term", monospace;
+	--r: 0px;
+	background: linear-gradient(var(--line) 1px, transparent 1px) 0 0 / 24px 24px, linear-gradient(90deg, var(--line) 1px, transparent 1px) 0 0 / 24px 24px, var(--bg);
+}
+:root[data-theme='dark']:not(#s0):not(#s1) {
+	--bg: #08121e;
+	--rail: #060e18;
+	--pop: #0c1929;
+	--ink: #dfeaf7;
+	--ink2: #93aecb;
+	--ink3: #577391;
+	--line: rgba(140, 192, 245, 0.16);
+	--fill: rgba(140, 192, 245, 0.065);
+	--acc: #7cc0ff;
+	--on-acc: #06101c;
+	--frost: rgba(12, 25, 41, 0.46);
+	background: linear-gradient(rgba(124, 192, 255, 0.055) 1px, transparent 1px) 0 0 / 24px 24px, linear-gradient(90deg, rgba(124, 192, 255, 0.055) 1px, transparent 1px) 0 0 / 24px 24px, var(--bg);
+}
+:root:not(#s0):not(#s1):not([data-theme='dark']) {
+	background: linear-gradient(rgba(20, 62, 118, 0.05) 1px, transparent 1px) 0 0 / 24px 24px, linear-gradient(90deg, rgba(20, 62, 118, 0.05) 1px, transparent 1px) 0 0 / 24px 24px, var(--bg);
+}
+:root:not(#s0):not(#s1) :is(body, #panel, .tn-pane, #tn-ph-win, #tn-ph-top) {
+	background: transparent;
+}
+:root:not(#s0):not(#s1) #tabbar {
+	border-right: 1px solid var(--line);
+}
+:root:not(#s0):not(#s1) :is(.tn-session-tab, #tabbar .tt, .pf-sec-t, .ck-group, .sf-tool-head, .sf-section-head, th) {
+	font-family: var(--mn);
+}
+:root:not(#s0):not(#s1) .tn-session-tab {
+	letter-spacing: 0.14em;
+	color: var(--acc);
+}
+:root:not(#s0):not(#s1) #tabbar .tt.on {
+	background: var(--pop);
+	border: 1px solid var(--acc);
+	box-shadow: none;
+}
+:root:not(#s0):not(#s1) .sf-region .md :is(h1, h2, h3) {
+	font-family: var(--mn);
+	letter-spacing: 0.02em;
+}
+:root:not(#s0):not(#s1) .sf-region .md :is(.code, .mfig),
+:root:not(#s0):not(#s1) .sf-card:not([data-role^='omp.user']) {
+	background: color-mix(in srgb, var(--pop) 82%, transparent);
+}
+:root:not(#s0):not(#s1) .sf-card[data-role^='omp.user'] > .sf-card-body,
+:root:not(#s0):not(#s1) .sf-col[data-role^='omp.editor'] {
+	border-color: var(--acc);
+}
+:root:not(#s0):not(#s1) .tv {
+	--tv-bg: var(--bg);
+	--tv-fg: var(--ink);
+	--tv-font: var(--mn);
+	--tv-cur: var(--acc);
+	--tv-cur-ink: var(--on-acc);
+	font-family: var(--mn);
+	background: transparent;
+}

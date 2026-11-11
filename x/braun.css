@@ -1,0 +1,84 @@
+:root:not(#s0):not(#s1) {
+	--bg: #f1f0ec;
+	--rail: #e5e3dd;
+	--pop: #f7f6f3;
+	--ink: #191918;
+	--ink2: #52514d;
+	--ink3: #83817b;
+	--line: rgba(25, 25, 24, 0.13);
+	--fill: rgba(25, 25, 24, 0.055);
+	--acc: #e04819;
+	--on-acc: #ffffff;
+	--frost: rgba(247, 246, 243, 0.52);
+	--frost-blur: blur(44px) saturate(1.25);
+	--lift: 0 1px 0 rgba(255, 255, 255, 0.7) inset, 0 10px 24px rgba(20, 20, 18, 0.1);
+	--sans: "IBM Plex Sans", Geist, sans-serif;
+	--mn: "IBM Plex Mono", "Ioskeley Mono Term", monospace;
+	--tv-font: "IBM Plex Mono", "Ioskeley Mono Term", monospace;
+	--r: 3px;
+}
+:root[data-theme='dark']:not(#s0):not(#s1) {
+	--bg: #151516;
+	--rail: #101011;
+	--pop: #1c1c1e;
+	--ink: #ecebe6;
+	--ink2: #a4a29b;
+	--ink3: #6c6b66;
+	--line: rgba(255, 255, 255, 0.1);
+	--fill: rgba(255, 255, 255, 0.055);
+	--acc: #ff5c2b;
+	--on-acc: #101011;
+	--frost: rgba(28, 28, 30, 0.48);
+	--lift: 0 1px 0 rgba(255, 255, 255, 0.06) inset, 0 12px 28px rgba(0, 0, 0, 0.5);
+}
+:root:not(#s0):not(#s1) body {
+	font-variant-numeric: tabular-nums;
+}
+:root:not(#s0):not(#s1) #tabbar {
+	border-right: 1px solid var(--line);
+}
+:root:not(#s0):not(#s1) .tn-session-tab {
+	font-family: var(--mn);
+	font-size: 10.5px;
+	letter-spacing: 0.12em;
+}
+:root:not(#s0):not(#s1) .tt.on {
+	position: relative;
+	background: var(--bg);
+	border: 1px solid var(--line);
+	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.06);
+}
+:root:not(#s0):not(#s1) .tt.on::before {
+	content: '';
+	width: 6px;
+	height: 6px;
+	flex: none;
+	border-radius: 50%;
+	background: var(--acc);
+}
+:root:not(#s0):not(#s1) .tt.on .tn-dk {
+	display: none;
+}
+:root:not(#s0):not(#s1) .sf-region .md :is(.code, .mfig) {
+	background: var(--rail);
+}
+:root:not(#s0):not(#s1) .sf-card[data-role^='omp.user'] > .sf-card-body,
+:root:not(#s0):not(#s1) .sf-col[data-role^='omp.editor'] {
+	box-shadow: 0 1px 0 light-dark(rgba(255, 255, 255, 0.65), rgba(255, 255, 255, 0.05)) inset;
+}
+:root:not(#s0):not(#s1) [data-role='omp.composer.send'] .kbd {
+	border-radius: 50%;
+}
+:root:not(#s0):not(#s1) :is([data-role='omp.composer.model'], [data-role='omp.composer.effort'], [data-role='omp.composer.thinking']) {
+	font-family: var(--mn);
+	font-size: 11px;
+	background: var(--rail);
+}
+:root:not(#s0):not(#s1) .tv {
+	--tv-bg: var(--bg);
+	--tv-fg: var(--ink);
+	--tv-font: var(--mn);
+	--tv-cur: var(--acc);
+	--tv-cur-ink: #ffffff;
+	font-family: var(--mn);
+}

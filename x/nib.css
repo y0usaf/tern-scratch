@@ -1,0 +1,66 @@
+:root:not(#s0):not(#s1) {
+	--bg: #f3f2ee;
+	--rail: #eae8e2;
+	--pop: #f8f7f4;
+	--ink: #151716;
+	--ink2: #4b504d;
+	--ink3: #7d837f;
+	--line: rgba(21, 23, 22, 0.14);
+	--fill: rgba(21, 23, 22, 0.055);
+	--acc: #156e43;
+	--on-acc: #f8f7f4;
+	--frost: rgba(243, 242, 238, 0.48);
+	--frost-blur: blur(44px) saturate(1.35);
+	--sans: Nib, Geist, sans-serif;
+	--mn: Nib, "Ioskeley Mono Term", monospace;
+	--tv-font: Nib, "Ioskeley Mono Term", monospace;
+	--r: 0px;
+}
+:root[data-theme='dark']:not(#s0):not(#s1) {
+	--bg: #101213;
+	--rail: #0c0e0f;
+	--pop: #16191b;
+	--ink: #e8ece9;
+	--ink2: #9ea7a1;
+	--ink3: #66706a;
+	--line: rgba(232, 236, 233, 0.13);
+	--fill: rgba(232, 236, 233, 0.055);
+	--acc: #4fd18b;
+	--on-acc: #0c0e0f;
+	--frost: rgba(20, 24, 26, 0.44);
+}
+:root:not(#s0):not(#s1) :is(body, .sf-region, .tv-block, .tv-dock) {
+	font: 14px/20px var(--sans);
+}
+:root:not(#s0):not(#s1) #tabbar {
+	border-right: 1px solid var(--line);
+}
+:root:not(#s0):not(#s1) #tabbar .tn-session-tab {
+	color: var(--acc);
+	letter-spacing: 0.1em;
+}
+:root:not(#s0):not(#s1) #tabbar .tt {
+	height: 30px;
+}
+:root:not(#s0):not(#s1) #tabbar .tt.on {
+	background: var(--bg);
+	box-shadow: inset 2px 0 0 var(--acc), 0 1px 0 var(--line), 0 -1px 0 var(--line);
+}
+:root:not(#s0):not(#s1) .sf-region .md .code pre,
+:root:not(#s0):not(#s1) :is(.sf-code, .sf-diff, .sf-ansi, .sf-rows) {
+	font: 13px/20px var(--mn);
+}
+:root:not(#s0):not(#s1) .sf-card[data-role^='omp.user'] > .sf-card-body {
+	border-left: 2px solid var(--acc);
+}
+:root:not(#s0):not(#s1) .sf-col[data-role^='omp.editor']:focus-within {
+	border-color: var(--acc);
+}
+:root:not(#s0):not(#s1) .tv {
+	--tv-bg: var(--bg);
+	--tv-fg: var(--ink);
+	--tv-font: var(--mn);
+	--tv-cur: var(--acc);
+	--tv-cur-ink: var(--on-acc);
+	font-family: var(--mn);
+}

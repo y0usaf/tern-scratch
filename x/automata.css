@@ -1,0 +1,107 @@
+:root:not(#s0):not(#s1) {
+	--bg: #dad4c4;
+	--rail: #d2ccb9;
+	--pop: #e2ddd0;
+	--ink: #2b2925;
+	--ink2: #57534a;
+	--ink3: #7d786c;
+	--line: rgba(43, 41, 37, 0.24);
+	--fill: rgba(43, 41, 37, 0.075);
+	--acc: #2b2925;
+	--on-acc: #dad4c4;
+	--bad: #a83228;
+	--frost: rgba(210, 204, 185, 0.46);
+	--frost-blur: blur(48px) saturate(1.1);
+	--sans: "IBM Plex Sans", Geist, sans-serif;
+	--mn: "Departure Mono", "IBM Plex Mono", monospace;
+	--tv-font: "IBM Plex Mono", "Ioskeley Mono Term", monospace;
+	--r: 0px;
+}
+:root[data-theme='dark']:not(#s0):not(#s1) {
+	--bg: #161513;
+	--rail: #121110;
+	--pop: #1d1c19;
+	--ink: #cdc7b8;
+	--ink2: #989284;
+	--ink3: #696459;
+	--line: rgba(205, 199, 184, 0.2);
+	--fill: rgba(205, 199, 184, 0.065);
+	--acc: #cdc7b8;
+	--on-acc: #161513;
+	--bad: #df5a4f;
+	--frost: rgba(29, 28, 25, 0.46);
+}
+:root:not(#s0):not(#s1) #tabbar {
+	border-right: 1px solid var(--line);
+	box-shadow: inset -4px 0 0 var(--bg), inset -5px 0 0 var(--line);
+}
+:root:not(#s0):not(#s1) :is(.tn-session-tab, .pf-sec-t, .ck-group, .sf-code-head) {
+	font: 400 11px/1.4 var(--mn);
+	letter-spacing: 0.14em;
+	text-transform: uppercase;
+}
+:root:not(#s0):not(#s1) .tn-session-tab {
+	color: var(--on-acc);
+	background: var(--ink);
+}
+:root:not(#s0):not(#s1) #tabbar .tt {
+	height: 32px;
+	margin-bottom: 3px;
+	font-family: var(--mn);
+	font-size: 12px;
+	background: var(--fill);
+}
+:root:not(#s0):not(#s1) #tabbar .tt.on {
+	color: var(--on-acc);
+	background: var(--ink);
+	box-shadow: none;
+}
+:root:not(#s0):not(#s1) #tabbar .tt.on .tn-dk {
+	color: var(--on-acc);
+}
+:root:not(#s0):not(#s1) .sf-region .md :is(h1, h2, h3) {
+	padding: 2px 0 2px 10px;
+	border-left: 4px solid var(--ink);
+	box-shadow: inset 2px 0 0 var(--bg);
+	font-family: var(--mn);
+	font-weight: 400;
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+}
+:root:not(#s0):not(#s1) .sf-card,
+:root:not(#s0):not(#s1) .sf-region .md :is(.code, .mfig) {
+	border: 1px solid var(--line);
+	border-left: 3px solid var(--ink);
+	background: color-mix(in srgb, var(--ink) 3%, transparent);
+}
+:root:not(#s0):not(#s1) .sf-card[data-role^='omp.user'] {
+	border: 0;
+	background: none;
+}
+:root:not(#s0):not(#s1) .sf-card[data-role^='omp.user'] > .sf-card-body {
+	border: 1px solid var(--line);
+	border-right: 4px solid var(--ink);
+}
+:root:not(#s0):not(#s1) .sf-col[data-role^='omp.editor'] {
+	border-top: 2px solid var(--ink);
+}
+:root:not(#s0):not(#s1) .tv {
+	--tv-bg: var(--bg);
+	--tv-fg: var(--ink);
+	--tv-font: "IBM Plex Mono", "Ioskeley Mono Term", monospace;
+	--tv-cur: var(--ink);
+	--tv-cur-ink: var(--bg);
+	font-family: "IBM Plex Mono", "Ioskeley Mono Term", monospace;
+}
+:root:not(#s0):not(#s1) :is(.cmdk, .mdl, .pk-sheet, .sf-ov-card, .tn-ib, .pop) {
+	border-top: 3px solid var(--ink);
+}
+:root:not(#s0):not(#s1) :is(.ck-item, .tn-cmp-row, .tn-ib-row)[aria-selected='true'],
+:root:not(#s0):not(#s1) .pk-selbar {
+	color: var(--on-acc);
+	background: var(--ink);
+	box-shadow: none;
+}
+:root:not(#s0):not(#s1) .ck-item[aria-selected='true'] :is(mark, .ck-sub, .ck-ic) {
+	color: var(--on-acc);
+}

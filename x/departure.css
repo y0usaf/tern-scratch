@@ -1,0 +1,101 @@
+:root:not(#s0):not(#s1) {
+	--bg: #f4f2ec;
+	--rail: #ece9e0;
+	--pop: #f8f6f0;
+	--ink: #141311;
+	--ink2: #4a4741;
+	--ink3: #7d786f;
+	--line: rgba(20, 19, 17, 0.18);
+	--fill: rgba(20, 19, 17, 0.06);
+	--acc: #c85200;
+	--on-acc: #f8f6f0;
+	--frost: rgba(244, 242, 236, 0.5);
+	--frost-blur: blur(44px) saturate(1.3);
+	--sans: "Departure Mono", "Ioskeley Mono Term", monospace;
+	--mn: "Departure Mono", "Ioskeley Mono Term", monospace;
+	--tv-font: "Departure Mono", "Ioskeley Mono Term", monospace;
+	--r: 0px;
+}
+:root[data-theme='dark']:not(#s0):not(#s1) {
+	--bg: #0b0b0c;
+	--rail: #101012;
+	--pop: #141417;
+	--ink: #eae7df;
+	--ink2: #a8a398;
+	--ink3: #6c685f;
+	--line: rgba(234, 231, 223, 0.16);
+	--fill: rgba(234, 231, 223, 0.06);
+	--acc: #ff982e;
+	--on-acc: #0b0b0c;
+	--frost: rgba(18, 18, 21, 0.48);
+}
+:root:not(#s0):not(#s1) body {
+	font-size: 12px;
+	line-height: 1.55;
+	letter-spacing: 0.01em;
+}
+:root:not(#s0):not(#s1) #tabbar {
+	border-right: 1px solid var(--line);
+}
+:root:not(#s0):not(#s1) .tn-session-tab {
+	width: max-content;
+	height: 22px;
+	margin-bottom: var(--u);
+	padding: 0 calc(var(--u) * 2);
+	color: var(--bg);
+	background: var(--ink);
+	letter-spacing: 0.08em;
+}
+:root:not(#s0):not(#s1) .tn-session-tab .ico {
+	display: none;
+}
+:root:not(#s0):not(#s1) .tt.on {
+	color: var(--ink);
+	background: var(--bg);
+	outline: 1px solid var(--line);
+	outline-offset: -1px;
+	box-shadow: inset 3px 0 0 var(--acc);
+}
+:root:not(#s0):not(#s1) :is(.sf-region, .tv-block, .tv-dock) {
+	font: 12px/20px var(--sans);
+}
+:root:not(#s0):not(#s1) .sf-region .md :is(h1, h2, h3, h4) {
+	text-transform: uppercase;
+	letter-spacing: 0.06em;
+}
+:root:not(#s0):not(#s1) .sf-region .md h2::before {
+	content: '// ';
+	color: var(--acc);
+}
+:root:not(#s0):not(#s1) .sf-region .md :is(.code-head, .mfig-head) {
+	color: var(--bg);
+	background: var(--ink);
+	border-bottom: 0;
+}
+:root:not(#s0):not(#s1) .sf-region .md :is(.code-head, .mfig-head) * {
+	color: var(--bg);
+}
+:root:not(#s0):not(#s1) .sf-card[data-role^='omp.user'] > .sf-card-body {
+	border-color: var(--ink);
+	box-shadow: inset 3px 0 0 var(--acc);
+}
+:root:not(#s0):not(#s1) .sf-col[data-role^='omp.editor'] {
+	border-color: var(--ink);
+}
+:root:not(#s0):not(#s1) .sf-col[data-role^='omp.editor']:focus-within {
+	border-color: var(--acc);
+	box-shadow: inset 3px 0 0 var(--acc);
+}
+:root:not(#s0):not(#s1) :is([data-role='omp.composer.model'], [data-role='omp.composer.effort'], [data-role='omp.composer.thinking']) {
+	text-transform: uppercase;
+	letter-spacing: 0.05em;
+	font-size: 11px;
+}
+:root:not(#s0):not(#s1) .tv {
+	--tv-bg: var(--bg);
+	--tv-fg: var(--ink);
+	--tv-font: var(--mn);
+	--tv-cur: var(--acc);
+	--tv-cur-ink: var(--on-acc);
+	font-family: var(--mn);
+}

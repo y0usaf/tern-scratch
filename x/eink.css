@@ -1,0 +1,89 @@
+:root:not(#s0):not(#s1) {
+	--bg: #ece9e1;
+	--rail: #ece9e1;
+	--pop: #ece9e1;
+	--ink: #141413;
+	--ink2: #3d3c39;
+	--ink3: #6b6963;
+	--line: #141413;
+	--fill: rgba(20, 20, 19, 0.07);
+	--acc: #141413;
+	--on-acc: #ece9e1;
+	--ok: #141413;
+	--warn: #3d3c39;
+	--bad: #141413;
+	--scrim: rgba(236, 233, 225, 0.72);
+	--frost: #e4e0d6;
+	--frost-blur: none;
+	--lift: 3px 3px 0 var(--ink);
+	--sans: Spectral, "Crimson Pro", serif;
+	--mn: "Atkinson Hyperlegible Mono Sonic", "IBM Plex Mono", monospace;
+	--tv-font: "Atkinson Hyperlegible Mono Sonic", "Ioskeley Mono Term", monospace;
+	--r: 0px;
+}
+:root[data-theme='dark']:not(#s0):not(#s1) {
+	--bg: #121312;
+	--rail: #121312;
+	--pop: #121312;
+	--ink: #e4e2da;
+	--ink2: #b4b1a7;
+	--ink3: #7e7c74;
+	--line: #b4b1a7;
+	--fill: rgba(228, 226, 218, 0.09);
+	--acc: #e4e2da;
+	--on-acc: #121312;
+	--ok: #e4e2da;
+	--warn: #b4b1a7;
+	--bad: #e4e2da;
+	--scrim: rgba(18, 19, 18, 0.72);
+	--frost: #1a1b1a;
+}
+:root:not(#s0):not(#s1) :is(body, .sf-region, .tv-block, .tv-dock) {
+	font: 14px/1.6 var(--sans);
+}
+:root:not(#s0):not(#s1) :is(#tabbar, button, input, select, th, .sf-tool-head, .sf-section-head) {
+	font-family: var(--mn);
+	font-size: 12px;
+}
+:root:not(#s0):not(#s1) #tabbar {
+	border-right: 1px solid var(--line);
+}
+:root:not(#s0):not(#s1) #tabbar .tt.on {
+	color: var(--on-acc);
+	background: var(--ink);
+	box-shadow: none;
+}
+:root:not(#s0):not(#s1) #tabbar .tt.on .tn-dk {
+	color: var(--on-acc);
+}
+:root:not(#s0):not(#s1) .sf-region .md a {
+	text-decoration: underline;
+}
+:root:not(#s0):not(#s1) .sf-region .md h1 {
+	font-size: 21px;
+}
+:root:not(#s0):not(#s1) .sf-region .md h2 {
+	font-size: 17px;
+	border-bottom: 1px solid var(--line);
+	padding-bottom: 2px;
+}
+:root:not(#s0):not(#s1) .sf-card[data-role^='omp.user'] > .sf-card-body,
+:root:not(#s0):not(#s1) .sf-col[data-role^='omp.editor'] {
+	backdrop-filter: none;
+	-webkit-backdrop-filter: none;
+}
+:root:not(#s0):not(#s1) .tv {
+	--tv-bg: var(--bg);
+	--tv-fg: var(--ink);
+	--tv-font: var(--mn);
+	--tv-cur: var(--ink);
+	--tv-cur-ink: var(--bg);
+	font-family: var(--mn);
+}
+:root:not(#s0):not(#s1) .tn-stage .tn-pane.multi:not(.on) .tv {
+	opacity: 0.85;
+}
+:root:not(#s0):not(#s1) .tv-thumb {
+	width: 2px;
+	background: var(--ink3);
+}

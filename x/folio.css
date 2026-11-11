@@ -1,0 +1,90 @@
+:root:not(#s0):not(#s1) {
+	--bg: #faf8f3;
+	--rail: #faf8f3;
+	--pop: #fdfcf9;
+	--ink: #171513;
+	--ink2: #555049;
+	--ink3: #8c857b;
+	--line: rgba(23, 21, 19, 0.13);
+	--fill: rgba(23, 21, 19, 0.04);
+	--acc: #b8291e;
+	--on-acc: #fdfcf9;
+	--frost: rgba(246, 242, 234, 0.46);
+	--frost-blur: blur(48px) saturate(1.2);
+	--sans: "EB Garamond", "Crimson Pro", serif;
+	--ui-sans: Geist, system-ui, sans-serif;
+	--mn: "CommitMono 275", "Ioskeley Mono Term", monospace;
+	--tv-font: "CommitMono 275", "Ioskeley Mono Term", monospace;
+	--r: 0px;
+}
+:root[data-theme='dark']:not(#s0):not(#s1) {
+	--bg: #0f0e0d;
+	--rail: #0f0e0d;
+	--pop: #171513;
+	--ink: #ece7de;
+	--ink2: #a8a095;
+	--ink3: #6e685f;
+	--line: rgba(236, 231, 222, 0.13);
+	--fill: rgba(236, 231, 222, 0.05);
+	--acc: #ef5b4c;
+	--on-acc: #0f0e0d;
+	--frost: rgba(26, 24, 21, 0.44);
+}
+:root:not(#s0):not(#s1) body {
+	font: 13px/1.5 var(--ui-sans);
+}
+:root:not(#s0):not(#s1) #tabbar {
+	border-right: 1px solid var(--line);
+}
+:root:not(#s0):not(#s1) .tn-session-tab {
+	font: 500 10px/1 var(--mn);
+	letter-spacing: 0.18em;
+	color: var(--acc);
+}
+:root:not(#s0):not(#s1) #tabbar .tt {
+	font: 400 15px/1.2 var(--sans);
+}
+:root:not(#s0):not(#s1) #tabbar .tt.on {
+	background: none;
+	box-shadow: inset 2px 0 0 var(--acc);
+	font-style: italic;
+}
+:root:not(#s0):not(#s1) .sf-chat-reader [data-role^='omp.assistant'] > .sf-md {
+	font: 16px/1.62 var(--sans);
+}
+:root:not(#s0):not(#s1) .sf-region .md h1 {
+	font: 500 24px/1.25 var(--sans);
+}
+:root:not(#s0):not(#s1) .sf-region .md h2 {
+	padding-top: calc(var(--u) * 2);
+	border-top: 1px solid var(--line);
+	font: 500 19px/1.3 var(--sans);
+	text-transform: uppercase;
+	letter-spacing: 0.04em;
+}
+:root:not(#s0):not(#s1) .sf-card {
+	border: 0;
+	border-left: 1px solid var(--line);
+}
+:root:not(#s0):not(#s1) .sf-region .md :is(.code, .mfig) {
+	border: 0;
+	border-top: 1px solid var(--line);
+	border-bottom: 1px solid var(--line);
+}
+:root:not(#s0):not(#s1) .sf-card[data-role^='omp.user'] > .sf-card-body {
+	border: 0;
+	border-right: 2px solid var(--acc);
+	font: italic 15.5px/1.5 var(--sans);
+}
+:root:not(#s0):not(#s1) .sf-col[data-role^='omp.editor'] {
+	border: 0;
+	border-top: 1px solid var(--ink);
+}
+:root:not(#s0):not(#s1) .tv {
+	--tv-bg: var(--bg);
+	--tv-fg: var(--ink);
+	--tv-font: var(--mn);
+	--tv-cur: var(--acc);
+	--tv-cur-ink: var(--on-acc);
+	font-family: var(--mn);
+}

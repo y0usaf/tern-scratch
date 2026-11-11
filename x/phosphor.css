@@ -1,0 +1,80 @@
+:root:not(#s0):not(#s1) {
+	--bg: #f6f1e5;
+	--rail: #efe9da;
+	--pop: #faf6ec;
+	--ink: #2c1c08;
+	--ink2: #634620;
+	--ink3: #947449;
+	--line: rgba(68, 42, 10, 0.2);
+	--fill: rgba(68, 42, 10, 0.065);
+	--acc: #a84b00;
+	--on-acc: #faf6ec;
+	--ok: #4d6b18;
+	--warn: #a84b00;
+	--bad: #b02818;
+	--frost: rgba(246, 241, 229, 0.52);
+	--frost-blur: blur(36px) saturate(1.2);
+	--glow: none;
+	--sans: "Cozette Vector Px", "Terminus Sonic", "Ioskeley Mono Term", monospace;
+	--mn: "Cozette Vector Px", "Terminus Sonic", "Ioskeley Mono Term", monospace;
+	--tv-font: "Cozette Vector Px", "Terminus Sonic", "Ioskeley Mono Term", monospace;
+	--r: 0px;
+}
+:root[data-theme='dark']:not(#s0):not(#s1) {
+	--bg: #060503;
+	--rail: #080604;
+	--pop: #0d0a06;
+	--ink: #ffb638;
+	--ink2: #c48822;
+	--ink3: #7c5414;
+	--line: rgba(255, 182, 56, 0.22);
+	--fill: rgba(255, 182, 56, 0.075);
+	--acc: #ffca62;
+	--on-acc: #080604;
+	--ok: #ffd06b;
+	--warn: #ffb638;
+	--bad: #ff6e42;
+	--frost: rgba(18, 13, 6, 0.5);
+	--glow: 0 0 8px rgba(255, 182, 56, 0.35);
+	--ansi1: #ff6e42;
+	--ansi2: #ffd06b;
+	--ansi3: #ffb638;
+	--ansi4: #e09b2d;
+	--ansi5: #ff9a52;
+	--ansi6: #ffd98e;
+}
+:root:not(#s0):not(#s1) :is(body, .sf-region, .tv-block, .tv-dock) {
+	font: 13px/19px var(--mn);
+}
+:root:not(#s0):not(#s1) :is(h1, h2, h3, h4, strong, b, th, .sf-t-strong, .ph-t) {
+	font-weight: 400;
+	color: var(--acc);
+}
+:root:not(#s0):not(#s1) #tabbar {
+	border-right: 1px solid var(--line);
+}
+:root:not(#s0):not(#s1) #tabbar .tt.on {
+	color: var(--acc);
+	box-shadow: inset 2px 0 0 var(--acc);
+}
+:root:not(#s0):not(#s1) :is(.tv-cursor, .sf-caret) {
+	box-shadow: var(--glow);
+}
+:root:not(#s0):not(#s1) .tv-cursor:is(.off, .hollow) {
+	box-shadow: none;
+}
+:root:not(#s0):not(#s1) .sf-region .md :is(.code, .mfig),
+:root:not(#s0):not(#s1) .sf-card:not([data-role^='omp.user']) {
+	border-style: dashed;
+}
+:root:not(#s0):not(#s1) .tv {
+	--tv-bg: var(--bg);
+	--tv-fg: var(--ink);
+	--tv-font: var(--mn);
+	--tv-cur: var(--acc);
+	--tv-cur-ink: var(--on-acc);
+	font-family: var(--mn);
+}
+:root:not(#s0):not(#s1) .sf-col[data-role^='omp.editor']:focus-within {
+	box-shadow: var(--glow);
+}

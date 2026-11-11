@@ -1,0 +1,91 @@
+:root:not(#s0):not(#s1) {
+	--bg: #f3f4ee;
+	--rail: transparent;
+	--pop: #fafbf6;
+	--ink: #1b241e;
+	--ink2: #46544b;
+	--ink3: #75847a;
+	--line: rgba(27, 36, 30, 0.2);
+	--fill: rgba(27, 36, 30, 0.055);
+	--acc: #3d2b56;
+	--on-acc: #fafbf6;
+	--shade: rgba(61, 43, 86, 0.24);
+	--frost: rgba(232, 224, 240, 0.46);
+	--frost-blur: blur(44px) saturate(1.35);
+	--lift: 4px 4px 0 var(--shade);
+	--sans: "Crimson Pro", "EB Garamond", serif;
+	--mn: "IBM Plex Mono", "Ioskeley Mono Term", monospace;
+	--tv-font: "IBM Plex Mono", "Ioskeley Mono Term", monospace;
+	--r: 0px;
+	background: radial-gradient(circle, rgba(27, 36, 30, 0.13) 1px, transparent 1.2px) 0 0 / 20px 20px, var(--bg);
+}
+:root[data-theme='dark']:not(#s0):not(#s1) {
+	--bg: #0d120f;
+	--rail: transparent;
+	--pop: #141b17;
+	--ink: #e5ebe4;
+	--ink2: #a5b3a8;
+	--ink3: #6c7c70;
+	--line: rgba(210, 230, 212, 0.18);
+	--fill: rgba(210, 230, 212, 0.06);
+	--acc: #b8dc72;
+	--on-acc: #111912;
+	--shade: rgba(0, 0, 0, 0.55);
+	--frost: rgba(24, 34, 28, 0.48);
+	background: radial-gradient(circle, rgba(184, 220, 114, 0.13) 1px, transparent 1.2px) 0 0 / 20px 20px, var(--bg);
+}
+:root:not(#s0):not(#s1) :is(body, #panel, .tn-pane, #tn-ph-win, #tn-ph-top) {
+	background: transparent;
+}
+:root:not(#s0):not(#s1) .ft {
+	background: var(--pop);
+}
+:root:not(#s0):not(#s1) :is(body, .sf-region, .tv-block, .tv-dock) {
+	font: 15.5px/1.55 var(--sans);
+}
+:root:not(#s0):not(#s1) :is(button, input, select, .tn-session-tab, .pf-sec-t, .ck-group, .sf-tool-head, .sf-section-head, .sf-card-head, th) {
+	font-family: var(--mn);
+	font-size: 11.5px;
+}
+:root:not(#s0):not(#s1) #tabbar .tn-session-tab {
+	width: max-content;
+	padding: 0 calc(var(--u) * 2.5);
+	color: var(--on-acc);
+	background: var(--acc);
+	letter-spacing: 0.1em;
+}
+:root:not(#s0):not(#s1) #tabbar .tt {
+	height: 34px;
+	font: 400 16px/1.2 var(--sans);
+}
+:root:not(#s0):not(#s1) #tabbar .tt.on {
+	background: var(--pop);
+	border: 1px solid var(--line);
+	box-shadow: 3px 3px 0 var(--shade);
+}
+:root:not(#s0):not(#s1) .sf-region .md h1 {
+	font-size: 24px;
+	font-weight: 500;
+}
+:root:not(#s0):not(#s1) .sf-region .md h2 {
+	font-size: 20px;
+	font-weight: 500;
+}
+:root:not(#s0):not(#s1) .sf-card[data-role^='omp.user'] > .sf-card-body,
+:root:not(#s0):not(#s1) .sf-col[data-role^='omp.editor'] {
+	box-shadow: 4px 4px 0 var(--shade);
+}
+:root:not(#s0):not(#s1) .sf-region .md :is(.code, .mfig) {
+	background: var(--pop);
+	box-shadow: 3px 3px 0 var(--shade);
+}
+
+:root:not(#s0):not(#s1) .tv {
+	--tv-bg: var(--bg);
+	--tv-fg: var(--ink);
+	--tv-font: var(--mn);
+	--tv-cur: var(--acc);
+	--tv-cur-ink: var(--on-acc);
+	font-family: var(--mn);
+	background: transparent;
+}
