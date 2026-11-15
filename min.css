@@ -1,6 +1,6 @@
-*:not([data-role^='omp.bot.']):not(#s0):not(#s1),
-*:not([data-role^='omp.bot.']):not(#s0):not(#s1)::before,
-*:not([data-role^='omp.bot.']):not(#s0):not(#s1)::after {
+*:not([data-role^='omp.bot.']):not(.sf-chat-reader *):not(#s0):not(#s1),
+*:not([data-role^='omp.bot.']):not(.sf-chat-reader *):not(#s0):not(#s1)::before,
+*:not([data-role^='omp.bot.']):not(.sf-chat-reader *):not(#s0):not(#s1)::after {
 	all: unset;
 	box-sizing: border-box;
 }
